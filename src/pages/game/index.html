@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-game.scss">
+    <title>GAME OINK OINK</title>
+</head>
+<body>
+    <input type="text" id="playerName" placeholder="Nombre del jugador">
+    <button onclick="addPlayer(document.getElementById('playerName').value)">Añadir jugador</button>
+    <button onclick="resetGame()">Reiniciar</button>
+    <button onclick="play()">Play</button>
+    <h2>Participantes:</h2>
+    <ul id="playerList"></ul>
+    <h2>Eliminados</h2>
+    <ul id="eliminatedList"></ul>
+    <script src="game.ts"></script>
+</body>
+</html>
