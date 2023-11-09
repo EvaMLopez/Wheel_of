@@ -1,3 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+
+$font-stack: 'Inter';
+
 body {
    
     height: 100vh;
@@ -6,15 +18,23 @@ body {
     background-position-x: center;
     background-position-y: top;
     background-size: cover;
+
+    .contenedor_fondo {
+        width: 100%;
+        
+    }
+
+    .TextoComoJugar {
+        font-family: $font-stack;
+        font-size:15px;
+        background-color:rgb(255, 255, 255, 0.35);
+        padding: 10%;
+        margin: 2%;
+        text-align: justify;
+        
+        @include desktop(){
+            font-size: 22px;
+        }
+    }
  }
- .contenedor_fondo {
-     width: 100%;
-     
- }
- 
- 
- @media (min-widh: 690px) {
-     .img_fondo_main {
-         width: 100%;
-     }
- }
+
