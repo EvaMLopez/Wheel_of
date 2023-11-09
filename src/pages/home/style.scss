@@ -4,19 +4,30 @@ header {
     height: 100px;
     width: 100%;
     background-color: #004643;
+   /*  display: flex;
+    align-items: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
 }
 
-#logo {
+#LogoHeader img {
     height: 60px;
     width: 60px;
-    padding: auto;
-
+    padding: 20px 20px;
+    position: absolute;
+   
+    
 }
 
-h1 {
+#TitleHeader {
     font-family: inter;
     font-size: 20px;
-    border-color: #F9BC60;
+    -webkit-text-stroke-color: #F9BC60;
+    -webkit-text-stroke-width: 1px;
     color: #D7D7D7;
-    text-shadow: 20px 20px;
+    text-shadow: 0px 5px 0px #004643 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
