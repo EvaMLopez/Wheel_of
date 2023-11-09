@@ -33,14 +33,7 @@ body {
         margin: 2%;
         text-align: justify;
 
-        .ParrTextoComoJugar {
-            font-size:15px;
-            @include desktop(){
-                font-size: 22px;
-            }
-        }
-        
-        .SecTituloComoJugar {
+        .TituloComoJugar {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -48,6 +41,15 @@ body {
                 font-size: 24px;
             }
         }
+
+        .ParrTextoComoJugar {
+            font-size:15px;
+            @include desktop(){
+                font-size: 22px;
+            }
+        }
+        
+        
         
     }
  }
