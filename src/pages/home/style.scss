@@ -1,0 +1,20 @@
+body {
+   
+    height: 100vh;
+    background-image: url('../../assets/images/fondo_home.webp');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+ }
+ .contenedor_fondo {
+     width: 100%;
+     
+ }
+ 
+ 
+ @media (min-widh: 690px) {
+     .img_fondo_main {
+         width: 100%;
+     }
+ }
