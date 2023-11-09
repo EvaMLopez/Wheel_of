@@ -24,17 +24,31 @@ body {
         
     }
 
-    .TextoComoJugar {
+    
+
+    .SecTextoComoJugar {
         font-family: $font-stack;
-        font-size:15px;
         background-color:rgb(255, 255, 255, 0.35);
         padding: 10%;
         margin: 2%;
         text-align: justify;
-        
-        @include desktop(){
-            font-size: 22px;
+
+        .ParrTextoComoJugar {
+            font-size:15px;
+            @include desktop(){
+                font-size: 22px;
+            }
         }
+        
+        .SecTituloComoJugar {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            @include desktop(){
+                font-size: 24px;
+            }
+        }
+        
     }
  }
 
