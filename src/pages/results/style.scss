@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+$font-stack: 'inter';
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+}
+
+body {
+    background-image: url(../../assets/images/Sin\ título.png);
+    background-repeat: no-repeat;
+    background-size: 130% 85%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 60rem;
+    margin: 0;
+    /* Elimina los márgenes por defecto */
+    padding: 0;
+    /* Elimina los rellenos por defecto */
+    overflow: hidden;
+
+    /* Evita el desbordamiento de la sección en la imagen de fondo */
+    @include desktop() {
+        background-image: url(../../assets/images/S1e9_win_a_pig.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 110%;
+        max-width: 100%;
+        max-height: 100%;
+
+    }
+
+
+    .ContainResult {
+        padding-top: 58.9vh;
+        height: 39vh;
+
+        @include desktop() {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+
+
+
+
+
+        }
+
+
+
+        .ListResult {
+
+            height: 40vh;
+            background-color: #004643;
+            opacity: 0.48;
+
+            @include desktop() {
+                display: flex;
+                flex-direction: column;
+                width: 23%;
+                opacity: 0.55;
+                height: 100%;
+                
+            }
+
+
+            .TittleListResult {
+                font-family: $font-stack;
+                color: aliceblue;
+                -webkit-text-stroke: 0.5px #ffea72;
+                font-size: 2.4vh;
+                text-align: center;
+
+            }
+
+            .ListResults {
+                color: aliceblue;
+                -webkit-text-stroke: 0.5px #ffea72;
+                font-size: 2.5vh;
+                list-style-type: none;
+
+
+
+
+
+            }
+
+            .ListResults hr {
+                margin-top: 2px;
+                /* Ajusta la cantidad de margen a tu preferencia */
+            }
+
+            #ButtonResult {
+                display: block;
+                margin: 0 auto;
+                /* Esto centrará el botón horizontalmente */
+                /* Agrega cualquier estilo necesario para #ButtonResult aquí */
+                border-radius: 20px;
+                height: 3vh;
+            }
+
+        }
+
+
+
+    }
+
+}
