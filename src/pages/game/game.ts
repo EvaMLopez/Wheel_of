@@ -4,9 +4,7 @@ let eliminated: string[] = [];
 function addPlayer(name: string): void {
     if (players.length < 25) {
         let balloonNumber = Math.floor(Math.random() * 25) + 1; 
-        players.push({name: name, balloon: '../../assets/icons/balloon/balloon' + balloonNumber + '.svg'}); // guarda el nombre del jugador y el globo asignado
-        updatePlayerList();
-        updatePlayerNameList();
+        players.push({name: name, balloon: '../../assets/icons/balloon/balloon' + balloonNumber + '.svg'}); 
     } else {
         alert("No se pueden añadir más de 25 jugadores")
     }
