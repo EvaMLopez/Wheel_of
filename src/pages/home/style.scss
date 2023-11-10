@@ -18,39 +18,66 @@ body {
     background-position-x: center;
     background-position-y: top;
     background-size: cover;
+    font-family: $font-stack;
 
-    .contenedor_fondo {
+    .ContenedorFondo {
         width: 100%;
-        
-    }
-
+        justify-content: center;
+         
+        .SecTextoComoJugar {
+            font-family: $font-stack;
+            background-color:rgb(255, 255, 255, 0.35);
+            padding: 10%;
+            margin: 2%;
+            text-align: justify;
     
-
-    .SecTextoComoJugar {
-        font-family: $font-stack;
-        background-color:rgb(255, 255, 255, 0.35);
-        padding: 10%;
-        margin: 2%;
-        text-align: justify;
-
-        .TituloComoJugar {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            @include desktop(){
-                font-size: 24px;
+            .TituloComoJugar {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                @include desktop(){
+                    font-size: 24px;
+                }
             }
+    
+            .ParrTextoComoJugar {
+                font-size:15px;
+                @include desktop(){
+                    font-size: 22px;
+                }
+            }
+            
         }
 
-        .ParrTextoComoJugar {
-            font-size:15px;
-            @include desktop(){
-                font-size: 22px;
+        .SecBotonIrAlJuego {
+
+            width: 100%;
+            display:inline-flex;
+            justify-content: center;
+    
+            .FunBotonIrAlJuego {
+                width:max-content;
+                align-content: center;
+                text-decoration: none;
+        
+                #BotonIrAlJuego {
+                   
+                    background-color: #F6BFBF;
+                    font-family: $font-stack ;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    color: #004643;
+                    border-radius: 10px;
+                    border-bottom-color: #004643;
+                    border-bottom-width: thick ;
+                    
+                    padding: 15% 40%;
+                }
+        
             }
         }
-        
-        
-        
     }
+      
+    
  }
 
