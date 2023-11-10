@@ -49,6 +49,8 @@ header {
 }
 
 #PlayStart {
+    left: 0;
+    @include desktop() { 
     color:#D7D7D7;
     font-family: $font-stack;
     font-size: 18px;
@@ -56,4 +58,5 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding-right: 60px;
+    }
 }
