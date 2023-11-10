@@ -54,11 +54,7 @@ function updatePlayerList(): void {
     for (let i = 0; i < players.length; i++) {
         let li = document.createElement('li');
         let img = document.createElement('img');
-<<<<<<< HEAD
         img.src = players[i].balloon;
-=======
-        img.src = players[i].balloon; 
->>>>>>> feature/game
         img.alt = players[i].name;
         li.appendChild(img);
         if (playerList) playerList.appendChild(li);
