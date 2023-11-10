@@ -49,7 +49,7 @@ header {
 }
 
 #PlayStart {
-    left: 0;
+    display: none;
     @include desktop() { 
     color:#D7D7D7;
     font-family: $font-stack;
