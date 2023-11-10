@@ -19,6 +19,8 @@ body {
     background-position-y: top;
     background-size: cover;
     font-family: $font-stack;
+    color:#004643;
+    font-weight:600;
 
     .ContenedorFondo {
         width: 100%;
@@ -30,18 +32,21 @@ body {
             padding: 10%;
             margin: 2%;
             text-align: justify;
+            
     
             .TituloComoJugar {
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: bolder;
                 text-align: center;
                 @include desktop(){
-                    font-size: 24px;
+                    font-size: 30px;
                 }
             }
     
             .ParrTextoComoJugar {
                 font-size:15px;
+                overflow: auto;
+                
                 @include desktop(){
                     font-size: 22px;
                 }
@@ -59,6 +64,7 @@ body {
                 width:max-content;
                 align-content: center;
                 text-decoration: none;
+                
         
                 #BotonIrAlJuego {
                    
@@ -68,10 +74,21 @@ body {
                     font-weight: bolder;
                     color: #004643;
                     border-radius: 10px;
-                    border-bottom-color: #004643;
-                    border-bottom-width: thick ;
-                    
+                    border-style: solid;
+                    border-color: #004643;
+                    border-bottom-width: medium ;
                     padding: 15% 40%;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #E16162;
+                        scale: 1.2;
+                    }
+                       
+
+                    
+
+                    @include desktop(){
+                        font-size: 30px;
                 }
         
             }
@@ -81,3 +98,4 @@ body {
     
  }
 
+}
