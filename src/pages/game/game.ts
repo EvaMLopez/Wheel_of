@@ -4,7 +4,12 @@ let eliminated: string[] = [];
 function addPlayer(name: string): void {
     if (players.length < 25) {
         let balloonNumber = Math.floor(Math.random() * 25) + 1; 
+<<<<<<< HEAD
         players.push({name: name, balloon: '../../assets/icons/balloon/balloon' + balloonNumber + '.svg'}); 
+=======
+        players.push({name: name, balloon: '../../assets/icons/balloon/balloon' + balloonNumber + '.svg'});
+        updatePlayerList();
+>>>>>>> feature/game
         updatePlayerNameList();
     } else {
         alert("No se pueden añadir más de 25 jugadores")
@@ -49,7 +54,11 @@ function updatePlayerList(): void {
     for (let i = 0; i < players.length; i++) {
         let li = document.createElement('li');
         let img = document.createElement('img');
+<<<<<<< HEAD
         img.src = players[i].balloon;
+=======
+        img.src = players[i].balloon; 
+>>>>>>> feature/game
         img.alt = players[i].name;
         li.appendChild(img);
         if (playerList) playerList.appendChild(li);
