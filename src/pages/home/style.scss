@@ -8,65 +8,81 @@
     }
  }
 
- $font-stack: 'Inter';
+$navHeight: calc(100% - 60px);
 
-header {
+ $font-stack: 'Inter';q
+* {
+    margin: 0;
+}
+
+.header {
     height: 100px;
     width: 100%;
     background-color: #004643;
     @include desktop() {
-    height: 260px;
-    } 
-}
+    height: 240px;
+    position: fixed;
+    width: 100%;
+    }
 
-#LogoHeader img {
-    height: 60px;
-    width: 60px;
-    padding: 20px 30px;
-    border-radius: 100%;
-    position: absolute; 
-    @include desktop() {
-        padding-top: 30px;
-        height: 160px;
-        width: 160px;
+    .LogoTitleNav {
+        display: flex;
+        justify-content: flex-start ;
+        align-items: center;
+        gap: 10px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    #LogoHeader img {
+        height: 60px;
+        width: 60px;
+        // padding: 20px 30px;
+        border-radius: 100%;
+        // position: absolute; 
+        @include desktop() {
+            height: 160px;
+            width: 160px;
+        } 
     }    
-}
 
-#TitleHeader {
-    font-family: $font-stack;
-    font-size: 20px;
-    font-weight: bold;
-    -webkit-text-stroke-color: #F9BC60;
-    -webkit-text-stroke-width: 0.5px;
-    color: #D7D7D7;
-    text-shadow: -4px 3px 0 #0a0e27 , -14px 7px 0 #0a0e27;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    @include desktop() {   
-        font-size: 34px;
-        padding-top: 20px;
-        padding-bottom: -10px;
-    }
-}
+    #TitleHeader {
+        font-family: $font-stack;
+        font-size: 14px;
+        font-weight: bold;
+        -webkit-text-stroke-color: #F9BC60;
+        -webkit-text-stroke-width: 0.5px;
+        color: #D7D7D7;
+        text-shadow: -4px 3px 0 #0a0e27 , -6px 6px 0 #0a0e27;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // margin-inline-start: 30px;
+            @include desktop() {   
+                font-size: 34px;
+                // padding-top: 20px;
+                // padding-bottom: -10px;
+            }
+        }
 
-#PlayStart {
-    display: none;
-    @include desktop() { 
-    color:#D7D7D7;
-    font-family: $font-stack;
-    font-size: 18px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 60px;
-    }
-
+        #PlayStart {
+            display: none;
+            @include desktop() { 
+            color:#D7D7D7;
+            font-family: $font-stack;
+            font-size: 18px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 60px;
+            }
+        
+        }
 }
 
 body {
    
-    height: 100vh;
+    height: 100%;
     background-image: url('../../assets/images/fondo_home.webp');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -79,13 +95,15 @@ body {
     .ContenedorFondo {
         width: 100%;
         justify-content: center;
+        align-items: center;
          
         .SecTextoComoJugar {
             font-family: $font-stack;
             background-color:rgb(255, 255, 255, 0.35);
             padding: 10%;
-            margin: 2%;
+            // margin: 15%;
             text-align: justify;
+            
             
     
             .TituloComoJugar {
@@ -149,4 +167,102 @@ body {
     
  }
 
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 22px;
+    margin: 0 20px;
+    line-height: 0px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+    
+}
+
+.nav-menu-link:active,
+.nav-menu-link:hover {
+    background-color: #004643;
+    transition: 0.5s;
+}
+
+ .nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    
+    display: none;
+   
+} 
+
+.nav-toggle:focus:not(:focus-visible){
+    outline: none;
+}
+
+@media (max-width:690px) {
+   
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color:#004643;
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+
+        height: $navHeight;
+        overflow-y: auto;
+
+        left: 100%;
+    }
+    
+    .nav-menu-item {
+        line-height: 20px;
+        padding: 1px 3px;
+        
+    }
+    
+    .nav-menu-link:active,
+    .nav-menu-link:hover {
+        background-color: none;
+        color: #327e7a;
+    }
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    
 }
