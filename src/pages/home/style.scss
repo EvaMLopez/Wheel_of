@@ -16,7 +16,7 @@
 
 $navHeight: calc(100% - 60px);
 
- $font-stack: 'Inter';q
+ $font-stack: 'Inter';
 * {
     margin: 0;
     box-sizing: border-box;
@@ -101,15 +101,30 @@ body {
 
         .nav {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items:end;
+            margin-right: 20px;
+            // background-color: rgb(0, 71, 68, 0.80);
+            position: fixed;
+            left: 0;
+            top: 0px;
+            width: 100%;
+            height: 100px;
             @include desktop(){
-                max-width: 1024px;
+                background-color: rgb(0, 71, 68, 0.01);
+                justify-content: space-between;
+                top: 160px;
+                width: 100%;
+                max-width: 1204px;
                 margin: 0 auto;
 
             }
             
             .nav-menu {
                 list-style: none;
+                background-color: rgb(0, 71, 68, 0.80);
+                height: $navHeight;
+                overflow-y: auto;
 
                 @include desktop(){
                 display:flex;
@@ -120,7 +135,7 @@ body {
                 .nav-menu-item {
                     font-size: 18px;
                     margin: 0 10px;
-                    line-height: 80px;
+                    line-height: 60px;
                     text-transform: uppercase;
                     width: max-content;
                 }
@@ -137,17 +152,25 @@ body {
                     scale: 1.5;
                 }
 
-
-
                 .nav-link {
                     color: #D7D7D7;
                     text-decoration: none;
                 }
             }
-
             
         }
+        .nav-toggle {
+            color: #D7D7D7;
+            font-size: 30px;
+            background: none;
+            border: none;
+            line-height: 80px;
 
+            @include desktop() {
+                display: none;
+            }
+            
+        }
         
 
         
