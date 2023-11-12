@@ -8,133 +8,24 @@
     }
  }
 
+@mixin mobile {
+    @media screen and (max-width: 660px) {
+        @content
+    }
+}
+
 $navHeight: calc(100% - 60px);
 
  $font-stack: 'Inter';q
 * {
     margin: 0;
-}
-
-.header {
-    // height: 100px;
-    width: 100%;
-    background-color: #004643;
-    @include desktop() {
-    // height: 240px;
-    position: relative;
-    width: 100%;
-    }
-
-    .LogoTitleNav {
-        display: flex;
-        justify-content: flex-start ;
-        align-items: center;
-        gap: 10px;
-        margin-left: 5%;
-        margin-top: 2%;
-    }
-
-    #LogoHeader img {
-        height: 60px;
-        width: 60px;
-        // padding: 20px 30px;
-        border-radius: 100%;
-        // position: absolute; 
-        @include desktop() {
-            height: 160px;
-            width: 160px;
-        } 
-    }    
-
-    #TitleHeader {
-        font-family: $font-stack;
-        font-size: 1em;
-        font-weight: bold;
-        -webkit-text-stroke-color: #F9BC60;
-        -webkit-text-stroke-width: 0.5px;
-        color: #D7D7D7;
-        text-shadow: -4px 3px 0 #0a0e27 , -6px 6px 0 #0a0e27;
-            @include desktop() {   
-                font-size: 34px;
-
-            }
-        }
-
-        #PlayStart {
-            // display: none;
-            color:#D7D7D7;
-            font-family: $font-stack;
-            font-size: 18px;
-            @include desktop() { 
-                position: absolute;
-                top: 50%;
-                left: 80%;
-                }
-        
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-        
-            max-width: 1024px;
-            margin: 0 auto;
-        
-        }
-        
-        .nav-link {
-            color: white;
-            text-decoration: none;
-        }
-        
-        
-        .nav-menu {
-            display: flex;
-            margin-right: 40px;
-            list-style: none;
-        }
-        
-        .nav-menu-item {
-            font-size: 22px;
-            margin: 0 20px;
-            line-height: 0px;
-            text-transform: uppercase;
-            width: max-content;
-        }
-        
-        .nav-menu-link {
-            padding: 8px 12px;
-            border-radius: 3px;
-            
-        }
-        
-        .nav-menu-link:active,
-        .nav-menu-link:hover {
-            background-color: #004643;
-            transition: 0.5s;
-        }
-        
-         .nav-toggle {
-            color: white;
-            background: none;
-            border: none;
-            font-size: 30px;
-            padding: 0 20px;
-            // line-height: 60px;
-            cursor: pointer;
-            
-            display: none;
-           
-        } 
-        
-        .nav-toggle:focus:not(:focus-visible){
-            outline: none;
-        }
+    box-sizing: border-box;
 }
 
 body {
    
     height: 100%;
+    margin: 0;
     background-image: url('../../assets/images/fondo_home.webp');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -144,120 +35,196 @@ body {
     color:#004643;
     font-weight:600;
 
+
+    .header {
+        width: 100%;
+        height: 100px;
+        background-color: #004643;
+        position: fixed;
+        top: 0;
+        left:0;
+        @include desktop() {
+        position: relative;
+        margin: 0;
+        height: 200px;
+        
+        }
+
+        .LogoTitleNav {
+            display: flex;
+            justify-content: flex-start ;
+            align-items: center;
+            gap: 10px;
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+
+        #LogoHeader img {
+            height: 60px;
+            width: 60px;
+            // padding: 20px 30px;
+            border-radius: 100%;
+            // position: absolute; 
+            @include desktop() {
+                height: 160px;
+                width: 160px;
+            } 
+        }    
+
+        #TitleHeader {
+            font-family: $font-stack;
+            font-size: 1em;
+            font-weight: bold;
+            -webkit-text-stroke-color: #F9BC60;
+            -webkit-text-stroke-width: 0.5px;
+            color: #D7D7D7;
+            width: max-content;
+            text-shadow: -4px 3px 0 #0a0e27 , -6px 6px 0 #0a0e27;
+                @include desktop() {   
+                    font-size: 34px;
+
+                }
+            }
+
+        #PlayStart {
+            color: #004643;
+            font-family: $font-stack;
+            font-size: 18px;
+            @include desktop() { 
+                color:#D7D7D7;
+                position: absolute;
+                top: 50%;
+                left: 80%;
+                }
+            
+            }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            @include desktop(){
+                max-width: 1024px;
+                margin: 0 auto;
+
+            }
+            
+            .nav-menu {
+                list-style: none;
+
+                @include desktop(){
+                display:flex;
+                margin-right: 40px;
+                
+                }
+
+                .nav-menu-item {
+                    font-size: 18px;
+                    margin: 0 10px;
+                    line-height: 80px;
+                    text-transform: uppercase;
+                    width: max-content;
+                }
+
+                .nav-menu-link {
+                    padding: 8px 12 px;
+                    border-radius: 3px;
+                    
+                }
+
+                .nav-menu-link:hover {
+                    background-color:rgb(0, 71, 68, 0.6);
+                    transition: 0.5s;
+                    scale: 1.5;
+                }
+
+
+
+                .nav-link {
+                    color: #D7D7D7;
+                    text-decoration: none;
+                }
+            }
+
+            
+        }
+
+        
+
+        
+       }
+                   
+
     .ContenedorFondo {
         width: 100%;
+        margin: 0;
         justify-content: center;
         align-items: center;
-         
-        .SecTextoComoJugar {
-            font-family: $font-stack;
-            background-color:rgb(255, 255, 255, 0.35);
-            padding: 10%;
-            // margin: 15%;
-            text-align: justify;
-            
-            
-    
-            .TituloComoJugar {
-                font-size: 18px;
-                font-weight: bolder;
-                text-align: center;
-                @include desktop(){
-                    font-size: 30px;
-                }
-            }
-    
-            .ParrTextoComoJugar {
-                font-size:15px;
-                overflow: auto;
-                
-                @include desktop(){
-                    font-size: 22px;
-                }
-            }
-            
-        }
-
-        .SecBotonIrAlJuego {
-
-            width: 100%;
-            display:inline-flex;
-            justify-content: center;
-    
-            .FunBotonIrAlJuego {
-                width:max-content;
-                align-content: center;
-                text-decoration: none;
-                
-        
-                #BotonIrAlJuego {
-                   
-                    background-color: #F6BFBF;
-                    font-family: $font-stack ;
-                    font-size: 20px;
+                 
+            .SecTextoComoJugar {
+                font-family: $font-stack;
+                background-color:rgb(255, 255, 255, 0.35);
+                padding: 10%;
+                // margin: 15%;
+                text-align: justify;
+                    
+                .TituloComoJugar {
+                    font-size: 18px;
                     font-weight: bolder;
-                    color: #004643;
-                    border-radius: 10px;
-                    border-style: solid;
-                    border-color: #004643;
-                    border-bottom-width: medium ;
-                    padding: 15% 40%;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: #E16162;
-                        scale: 1.2;
-                    }
-                       
+                    text-align: center;
                     @include desktop(){
                         font-size: 30px;
+                        }
+                    }
+            
+                .ParrTextoComoJugar {
+                    font-size:15px;
+                    overflow: auto;
+                        
+                    @include desktop(){
+                        font-size: 22px;
+                        }
+                    }
+                    
                 }
         
-            }
-        }
-    }
-      
-    
- }
-
-}
-
-
-@media (max-width:690px) {
-   
-    
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        margin-right: 20px;
-        background-color:#004643;
-        position: fixed;
-        left: 0;
-        top: 100px;
-        width: 100%;
-
-        height: $navHeight;
-        overflow-y: auto;
-
-        left: 100%;
-    }
-    
-    .nav-menu-item {
-        line-height: 20px;
-        padding: 1px 3px;
+            .SecBotonIrAlJuego {
         
-    }
-    
-    .nav-menu-link:active,
-    .nav-menu-link:hover {
-        background-color: none;
-        color: #327e7a;
-    }
-    .nav-toggle {
-        display: block;
-    }
+                width: 100%;
+                display:inline-flex;
+                justify-content: center;
+            
+                .FunBotonIrAlJuego {
+                    width:max-content;
+                    align-content: center;
+                    text-decoration: none;
+                        
+                
+                    #BotonIrAlJuego {
+                           
+                        background-color: #F6BFBF;
+                        font-family: $font-stack ;
+                        font-size: 20px;
+                        font-weight: bolder;
+                        color: #004643;
+                        border-radius: 10px;
+                        border-style: solid;
+                        border-color: #004643;
+                        border-bottom-width: medium ;
+                        padding: 15% 40%;
+                        cursor: pointer;
+                            &:hover {
+                                background-color: #E16162;
+                                scale: 1.2;
+                            }
+                               
+                            @include desktop(){
+                                font-size: 30px;
+                            }
+                
+                    }
+                }
+            }
+              
+         }
+    }      
 
-    .nav-menu_visible {
-        left: 0;
-    }
-    
-}
