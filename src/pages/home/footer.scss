@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+ $font-stack:'Krona One';
+
+ footer {
+    height: 85px;
+    width: 100%;
+    background-color: #004643;
+    @include desktop() {
+    height: 150px;
+    } 
+}
+
+.AllRightReserved {
+    color: white;
+    font-family:$font-stack;
+    font-size: 8px;
+}
+
+.SocialNetwoks {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fb {
+    height: 33px;
+    width: 33px;
+    background-color: #F9BC60;
+    @include desktop() {
+        height: 41px;
+        width: 41px;
+    } 
+}
+
+#inst {
+    height: 33px;
+    width: 33px;
+    background-color:#F6BFBF;
+    @include desktop() {
+        height: 41px;
+        width: 41px;
+    } 
+}
+
+#email {
+    height: 33px;
+    width: 33px;
+    background-color: #E16162; 
+    @include desktop() {
+        height: 41px;
+        width: 41px;
+    } 
+}
+
+#youtube {
+    height: 33px;
+    width: 33px;
+    background-color: white; 
+    @include desktop() {
+        height: 41px;
+        width: 41px;
+    } 
+}
