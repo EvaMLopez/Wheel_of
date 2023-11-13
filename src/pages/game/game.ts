@@ -149,10 +149,14 @@ function updatePlayerList(): void {
     if (eliminatedList) eliminatedList.innerHTML = '';
 
     for (let i = 0; i < players.length; i++) {
+
         let li = document.createElement('li');
+        li.className = 'balloons-list'
         let img = document.createElement('img');
-        img.src = players[i].balloon;
+        img.src = players[i].balloon; 
         img.alt = players[i].name;
+        img.classList.add('balloon-img');
+        li.appendChild(img);       
 
         // globo grande 
         createBalloonOnImage(players[i].balloon, players[i].size);
