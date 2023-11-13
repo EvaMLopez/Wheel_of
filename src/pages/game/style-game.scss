@@ -2,7 +2,7 @@
     border: 2px solid red;
     width: 100%;
     height: 500px;
-    overflow: hidden; /* Oculta el contenido que desborda */
+    overflow: hidden; 
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -17,7 +17,7 @@
 }
 
 .balloons-list img {
-    width: 50px; /* Ajusta el tamaño de los globos según sea necesario */
-    height: 50px; /* Ajusta el tamaño de los globos según sea necesario */
+    width: 50px; 
+    height: 50px; 
     margin: 5px;
 }
