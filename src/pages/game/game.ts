@@ -53,6 +53,8 @@ function updatePlayerList(): void {
         img.src = players[i].balloon;
         img.alt = players[i].name;
         li.appendChild(img);
+        li.classList.add("balloonsLi")
+        img.classList.add("balloonsImg")
         if (playerList) playerList.appendChild(li);
     }
 
