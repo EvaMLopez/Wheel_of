@@ -10,10 +10,10 @@ $font-stack: 'inter';
 body {
     background-image: url(../../assets/images/Sin\ título.png);
     background-repeat: no-repeat;
-    background-size: 130% 85%;
+    background-size: 100% 85%;
     max-width: 100%;
     max-height: 100%;
-    height: 60rem;
+    height: 55rem;
     margin: 0;
     /* Elimina los márgenes por defecto */
     padding: 0;
@@ -27,13 +27,13 @@ body {
         background-size: 100% 93%;
         max-width: 100%;
         max-height: 100%;
-
+        height: 60rem;
     }
 
 
     .ContainResult {
-        padding-top: 58.9vh;
-        height: 39vh;
+        padding-top: 53.7vh;
+        height: 40vh;
 
         @include desktop() {
             display: flex;
@@ -43,7 +43,7 @@ body {
             height: 200%;
 
 
-            
+
 
 
 
@@ -53,19 +53,19 @@ body {
 
         .ListResult {
 
-            height: 40vh;
+            height: 45vh;
             background-color: #004643;
             opacity: 0.48;
 
             @include desktop() {
                 display: flex;
                 flex-direction: column;
-                width: 20%;
-                opacity: 0.60;
-                height: 100%;
+                width: 22.7%;
+                opacity: 0.70;
+                height: 55rem;
                 -webkit-text-stroke: 0.1px #f7eec0;
-               
-                
+
+
             }
 
 
@@ -75,11 +75,12 @@ body {
                 -webkit-text-stroke: 0.5px #ffea72;
                 font-size: 2.4vh;
                 text-align: center;
+
                 @include desktop() {
-                   
+
                     -webkit-text-stroke: 0.1px #f7eec0;
-                   
-                    
+
+
                 }
 
             }
@@ -89,7 +90,7 @@ body {
                 -webkit-text-stroke: 0.5px #ffea72;
                 font-size: 2.5vh;
                 list-style-type: none;
-                width: 180%;
+                width: 100%;
 
 
 
@@ -98,22 +99,19 @@ body {
             }
 
             .ListResults hr {
-                margin-top: 2px;
+                margin-top: 1px;
                 /* Ajusta la cantidad de margen a tu preferencia */
             }
 
-            #ButtonResult {
+            #ButtonReiniciar {
                 display: block;
                 margin: 0 auto;
                 /* Esto centrará el botón horizontalmente */
                 /* Agrega cualquier estilo necesario para #ButtonResult aquí */
                 border-radius: 20px;
                 height: 3vh;
-                @include desktop() {
-                   
-                    
-                    
-                }
+
+                @include desktop() {}
             }
 
         }
