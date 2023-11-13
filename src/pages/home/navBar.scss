@@ -2,14 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-@mixin desktop {
-    @media screen and (min-width: 660px) {
+@mixin mobile {
+    @media screen and (max-width: 660px) {
         @content
     }
  }
 
 
  $font-stack: 'Inter';
+ $heightNBmob: calc(100% - 60px);
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -24,15 +26,15 @@ body {
     background-color: #004643;
     width: 100%;
     top: 0;
-    left: 0;
+    // left: 0;
 }
 
 .nav {
     
     display: flex;
     justify-content: end;
-    max-width: 1800px;
-    
+    max-width: 1800px;  
+   
 }
 
 .nav-link {
@@ -44,6 +46,20 @@ body {
     display: flex ;
     margin-right: 40px;
     list-style: none;
+    @include mobile(){
+        flex-direction: column;
+        align-items:flex-end;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        left: 0;
+
+        .nav-menu_visible {
+            left: 100;
+        }
+        
+        
+    }
 }
 
 .nav-menu-item {
@@ -61,12 +77,36 @@ body {
 
 }
 
+.nav-menu-link:active,
 .nav-menu-link:hover {
     background-color: rgb(0, 27, 26);
     transition: 0.5s;
+    @include mobile(){
+        background: none;
+        color:rgb(3, 119, 113);
+    }
 }
 
+.nav-toggle {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    cursor: pointer;
 
+    display:none;
+
+    @include mobile(){
+        display: block;
+        
+    }
+
+}  
+
+.mostrar {
+    max-width: 660px;
+}
 
 
 
