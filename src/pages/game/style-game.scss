@@ -62,6 +62,16 @@ header {
 } */
 
 @import url(../home/style.scss);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+$font-stack: 'Inter';
+
+//  * {border: solid 1px red}
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
 
 ul {
     list-style: none;
@@ -69,17 +79,20 @@ ul {
 
 body {
     overflow: hidden;
+    font-family: $font-stack;
 } 
 
 h2 {
-
     text-align: center;
 }
-#play{
+
+#Play{
     border-radius: 3em;
     padding: 0.5em 1.5em;
-    margin: auto 5em;    
     background-color: #E16162;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#004643;
 }
 
 #imageSection {
@@ -95,31 +108,54 @@ h2 {
     z-index: 1;
 }
 
-#playerName {
-    
-    margin-bottom: 60px;
+#playerName {    
+    margin-bottom: 30px;
 }
 
-.balloon {
+.Balloon {
     width: 10px;
     height: auto;
     position: absolute;
 }
 
-.balloons-list  {
+.BalloonsList .BalloonImg {
+    width: 20px;
+}
+
+.BalloonsList {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto repeat(6, 1fr);     
+}
+
+.BalloonsList > *:first-child {
+    grid-column: 1 / span 1; 
+}
+
+.BalloonsList > *:nth-child(2) {
+    grid-column: 8 / span 1;
+}
+
+.BalloonsList > *:nth-child(3) {
+    grid-column: 9 / span 1;
+}
+
+.BalloonsList > *:nth-child(4) {
+    grid-column: 10 / span 1;
+}
+
+#IconAddUser {
+    margin-left: 1em;
+}
+
+#PlayerInput {
+    display: flex;
     align-items: center;
-    justify-content:baseline
-
+    justify-content: center;
 }
 
-.balloon-img {
-    margin-right: 10px;
-
+#playerName {
+    margin-bottom: 0;
 }
-
-
 
 // versión escritorio  --MODIFICAR para que se muestre --
 /* #star {
@@ -149,4 +185,11 @@ h2 {
     width: 50px; 
     height: 50px; 
     margin: 5px;
+}
+
+#BtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
 }

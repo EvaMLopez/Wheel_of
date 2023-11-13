@@ -17,40 +17,31 @@
         <div id="PlayStart">
             <p>El juego ha comenzado...</p>
         </div>
-    </header> 
-
-    <section id="imageSection">
-        <img src="../../assets/images/background_mobile.png" alt="">
-    </section>
-
-    <section id="balloonsSection"></section>
-
-    <section>
-        <button id="start">Comenzar</button>
-    </section>
-
+    </header>  
+    <div background-game>
+        <div class="ScreenGame">
+            <!-- <img class="BackgroundGame" src="../../assets/images/background_mobile.png" alt=""> -->
+            <div class="box-balloons" id="balloonsContainer"></div>
+        </div>
+            
+    </div>
+    <div id="BtnContainer" >
+        <button onclick="play()" id="Play">PLAY</button>
+    </div>
     <br>
-    <br>
-    <br>
-    <br>
-    <div class="box-balloons" id="balloonsContainer"></div>
-    <input type="text" id="playerName" placeholder="Nombre del jugador">
+    <div id="PlayerInput">
+        <input type="text" id="playerName" placeholder="Nombre del jugador">    
+        <img src="../../assets/icons/icon _user_add.png" id="IconAddUser" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
+    </div>
     
-    <img src="../../assets/icons/icon _user_add.png" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
-    
-    <button id="play" onclick="play()">PLAY</button>
-    
-    <!--<button onclick="resetGame()">Reiniciar</button>-->
-    <h2>Participantes:</h2>
-    <ul id="playerList"></ul>
-
+    <button onclick="resetGame()">Reiniciar</button>
+    <!-- <h2>Participantes:</h2>
+    <ul id="playerList"></ul> -->
     <h2>Nombres de los Participantes:</h2>
     <ul id="playerNameList"></ul>
-
     <h2>Nombres de los Eliminados</h2>
     <ul id="eliminatedNameList"></ul>
-
-    <!-- <script src="./home.ts"></script> -->
+    <script src="./home.ts"></script>
     <script src="game.ts"></script>
 </body>
 </html>
