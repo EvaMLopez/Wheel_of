@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+
+ $font-stack: 'Inter';
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $font-stack;
+
+    .header {
+        background-color: #004643;
+        height: 80px;
+        width: 100%;
+        top:100px;
+        left:0;
+
+        
+    }
+}
+
+
+
