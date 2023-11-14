@@ -1,14 +1,14 @@
-let players: {name: string, balloon: string}[] = [];
+let players: { name: string; balloon: string }[] = [];
 let eliminated: string[] = [];
 
 function addPlayer(name: string): void {
     if (players.length < 25) {
-        let balloonNumber = Math.floor(Math.random() * 25) + 1; 
-        players.push({name: name, balloon: '../../assets/icons/balloon/balloon' + balloonNumber + '.svg'}); 
+        let balloonNumber = Math.floor(Math.random() * 25) + 1;
+        players.push({ name: name, balloon: `../../assets/icons/balloon/balloon${balloonNumber}.svg` });
         updatePlayerList();
         updatePlayerNameList();
     } else {
-        alert("No se pueden añadir más de 25 jugadores")
+        alert("No se pueden añadir más de 25 jugadores");
     }
 }
 
@@ -21,39 +21,51 @@ function resetGame(): void {
 
 function play(): void {
     if (players.length < 2) {
-        alert("Como mínimo deben de tener 2 jugadores")
+        alert("Como mínimo deben de tener 2 jugadores");
     } else {
-        let sound = new Audio('../../assets/sounds/pinchazo.mp3'); 
-        sound.play(); 
+        let sound = new Audio('../../assets/sounds/pinchazo.mp3');
+        sound.play();
 
         let eliminatedPlayer = players.splice(Math.floor(Math.random() * players.length), 1);
         eliminated.push(eliminatedPlayer[0].name);
         updatePlayerList();
         updatePlayerNameList();
         updateEliminatedNameList();
-        
+
         if (players.length === 1) {
             let applauseSound = new Audio('../../assets/sounds/aplausos.mp3');
             applauseSound.play();
-            alert(`¡El jugador ${players[0].name} ha gando el cerdito!`);
+            alert(`¡El jugador ${players[0].name} ha ganado el cerdito!`);
         }
     }
 }
 
+function addBalloonToDiv(balloonSrc: string): void {
+    const balloonsContainer = document.getElementById('balloonsContainer');
+
+    if (balloonsContainer) {
+        const balloonDiv = document.createElement('div');
+        balloonDiv.className = 'balloons-row';
+
+        const img = document.createElement('img');
+        img.src = balloonSrc;
+        img.alt = 'Balloon';
+        img.classList.add('balloon-img');
+
+        balloonDiv.appendChild(img);
+        balloonsContainer.appendChild(balloonDiv);
+    }
+}
+
 function updatePlayerList(): void {
-    let playerList = document.getElementById('playerList');
+    let balloonsContainer = document.getElementById('balloonsContainer');
     let eliminatedList = document.getElementById('eliminatedList');
 
-    if (playerList) playerList.innerHTML = '';
+    if (balloonsContainer) balloonsContainer.innerHTML = '';
     if (eliminatedList) eliminatedList.innerHTML = '';
 
     for (let i = 0; i < players.length; i++) {
-        let li = document.createElement('li');
-        let img = document.createElement('img');
-        img.src = players[i].balloon;
-        img.alt = players[i].name;
-        li.appendChild(img);
-        if (playerList) playerList.appendChild(li);
+        addBalloonToDiv(players[i].balloon);
     }
 
     for (let i = 0; i < eliminated.length; i++) {
@@ -86,4 +98,3 @@ function updateEliminatedNameList(): void {
         if (eliminatedNameList) eliminatedNameList.appendChild(li);
     }
 }
-
