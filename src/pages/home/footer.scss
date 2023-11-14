@@ -17,17 +17,46 @@
     } 
 }
 
-.Section {
+/* .Section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     align-content: center;
+} */
+
+.Section {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;  
+    align-content: center;
+    gap: 100px;
+    
 }
 
 .AllRightsReserved {
     color: white;
     font-family:$font-stack;
-    font-size: 10px;
+    font-size: 15px;
+    text-align: center;
+    @include desktop() {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        } 
+
+}
+
+.FM ::after{
+   display: none; 
+
+    @include desktop() {
+        font-size: 30px;
+        color: white;
+        font-family:$font-stack;
+       /*  display: flex;
+        align-items: center; */
+        }  
 }
 
 .SocialNetworks {
@@ -43,8 +72,8 @@
     border-radius: 100%;
     border: black solid 1px;
      @include desktop() {
-        height: 41px;
-        width: 41px;
+        height: 44px;
+        width: 44px;
     } 
 }
 
@@ -55,8 +84,8 @@
     border-radius: 100%;
     border: black solid 1px;
     @include desktop() {
-        height: 41px;
-        width: 41px;
+        height: 42px;
+        width: 42px;
     } 
 }
 
@@ -67,8 +96,8 @@
     border-radius: 100%;
     border: black solid 1px;
     @include desktop() {
-        height: 41px;
-        width: 41px;
+        height: 42px;
+        width: 42px;
     } 
 }
 
@@ -79,13 +108,20 @@
     border-radius: 100%;
     border: black solid 1px;
     @include desktop() {
-        height: 41px;
-        width: 41px;
+        height: 42px;
+        width: 42px;
     } 
 }
 
 .Social {
     margin: 10%;
+    margin-left: 5%;
+    height: 28px;
+    width: 28px;
+    @include desktop() {
+        height: 38px;
+        width: 38px;
+    } 
 } 
 
 
