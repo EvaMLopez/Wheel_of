@@ -2,6 +2,19 @@
     margin: 0px;
     padding: 0px;
 }
+
+@mixin tablet {
+    @media screen and (min-width: 550px) {
+        @content
+    }
+ }
+
+ @mixin computer-screen {
+    @media screen and (min-width: 1024px) {
+        @content
+    }
+ }
+
 .ScreenGame {
     background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background.PNG');
     background-size: cover;
@@ -35,7 +48,7 @@
 }
 
 .box-balloons img{
-    width: 4.3rem;
+    width: 3.7rem;
 }
 
 .balloons-list {
@@ -46,3 +59,25 @@
     flex-wrap: wrap;
 }
 
+
+@include tablet(){
+
+    .box-balloons img{
+        margin-left: 1.5rem;
+        width: 5.5rem;
+    }
+    
+
+}
+
+@include computer-screen() { 
+
+.box-balloons{
+    width: 48%;
+}
+
+.box-balloons img{
+    width: 5.8rem;
+}
+
+}
