@@ -45,12 +45,12 @@ function addBalloonToDiv(balloonSrc: string): void {
 
     if (balloonsContainer) {
         const balloonDiv = document.createElement('div');
-        balloonDiv.className = 'balloons-row';
+        balloonDiv.className = 'BalloonsRow';
 
         const img = document.createElement('img');
         img.src = balloonSrc;
         img.alt = 'Balloon';
-        img.classList.add('balloon-img');
+        img.classList.add('BalloonImg');
 
         balloonDiv.appendChild(img);
         balloonsContainer.appendChild(balloonDiv);
@@ -83,6 +83,30 @@ function updatePlayerNameList(): void {
     for (let i = 0; i < players.length; i++) {
         let li = document.createElement('li');
         li.textContent = players[i].name;
+        li.className = 'BalloonsList'
+        let img = document.createElement('img');
+        img.src = players[i].balloon; 
+        img.alt = players[i].name;
+        img.classList.add('BalloonImg');
+        li.appendChild(img);       
+
+        let deleteIcon = document.createElement('img');
+        deleteIcon.src = '../../assets/icons/icon _trash.png';
+        deleteIcon.alt = 'Delete';
+        deleteIcon.className = ('DeleteImg');
+        deleteIcon.addEventListener('click', () => deletePlayer(i));
+        
+        let editIcon = document.createElement('img');
+        editIcon.src = '../../assets/icons/icon _edit.png';
+        editIcon.alt = 'Edit';
+        editIcon.className = ('EditImg');
+        editIcon.addEventListener('click', () => editPlayer(i));
+
+        li.appendChild(document.createTextNode(players[i].name));
+        li.appendChild(img);
+        li.appendChild(editIcon);
+        li.appendChild(deleteIcon);
+
         if (playerNameList) playerNameList.appendChild(li);
     }
 }
@@ -98,3 +122,31 @@ function updateEliminatedNameList(): void {
         if (eliminatedNameList) eliminatedNameList.appendChild(li);
     }
 }
+
+function editPlayer(index: number): void {
+    const newName = prompt("Ingresar nuevo participante:");
+    if (newName !== null) {
+    // actualizar nombre editado
+    players[index].name = newName;
+    
+    // actualizar listas
+    updatePlayerList();
+    updatePlayerNameList();
+     }
+    }
+    
+    function deletePlayer(index: number): void {
+     // eliminar 
+    players.splice(index, 1)
+    
+     // actualizar listas
+    updatePlayerList();
+    updatePlayerNameList();
+    updateEliminatedNameList();
+    }
+
+
+
+
+
+
