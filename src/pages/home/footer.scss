@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+ $font-stack:'Krona One';
+
+ footer {
+    height: 85px;
+    width: 100%;
+    background-color: #004643;
+    @include desktop() {
+    height: 150px;
+    } 
+}
+
+/* .Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+} */
+
+.Section {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;  
+    align-content: center;
+    gap: 100px;
+    
+}
+
+.AllRightsReserved {
+    color: white;
+    font-family:$font-stack;
+    font-size: 15px;
+    text-align: center;
+    @include desktop() {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        } 
+
+}
+
+.FM ::after{
+   display: none; 
+
+    @include desktop() {
+        font-size: 30px;
+        color: white;
+        font-family:$font-stack;
+       /*  display: flex;
+        align-items: center; */
+        }  
+}
+
+.SocialNetworks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.SocialFacebook {
+    height: 32px;
+    width: 32px;  
+    background-color: #F9BC60;
+    border-radius: 100%;
+    border: black solid 1px;
+     @include desktop() {
+        height: 44px;
+        width: 44px;
+    } 
+}
+
+.SocialInstagram {
+    height: 32px;
+    width: 32px;
+    background-color:#F6BFBF;
+    border-radius: 100%;
+    border: black solid 1px;
+    @include desktop() {
+        height: 42px;
+        width: 42px;
+    } 
+}
+
+.SocialMail {
+    height: 32px;
+    width: 32px;
+    background-color: #E16162; 
+    border-radius: 100%;
+    border: black solid 1px;
+    @include desktop() {
+        height: 42px;
+        width: 42px;
+    } 
+}
+
+.SocialYoutube {
+    height: 32px;
+    width: 32px; 
+    background-color: white; 
+    border-radius: 100%;
+    border: black solid 1px;
+    @include desktop() {
+        height: 42px;
+        width: 42px;
+    } 
+}
+
+.Social {
+    margin: 10%;
+    margin-left: 5%;
+    height: 28px;
+    width: 28px;
+    @include desktop() {
+        height: 38px;
+        width: 38px;
+    } 
+} 
+
+
+
+
+
