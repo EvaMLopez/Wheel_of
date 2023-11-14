@@ -1,14 +1,6 @@
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
+const button = (document.querySelector('.nav-toggle') as HTMLButtonElement)
+const nav = (document.querySelector('.nav') as HTMLElement)
 
-if (navToggle && navMenu) {
-    navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("nav-menu_visible");
-
-        if (navMenu.classList.contains("nav-menu_visible")) {
-            navToggle.setAttribute("aria-label", "Cerrar menú");
-        } else {
-            navToggle.setAttribute("aria-label", "Abrir menú");
-        }
-    });
-}
+button.addEventListener('click',(): void => {
+    nav.classList.toggle('activo')
+})
