@@ -4,6 +4,8 @@
 
 @import './navBar.scss';
 
+@import './main.scss';
+
 @mixin desktop {
     @media screen and (min-width: 660px) {
         @content
