@@ -2,151 +2,93 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+@import './navBar.scss';
+
 @mixin desktop {
     @media screen and (min-width: 660px) {
         @content
     }
  }
 
+
  $font-stack: 'Inter';
 
-header {
-    height: 100px;
-    width: 100%;
-    background-color: #004643;
-    @include desktop() {
-    height: 260px;
-    } 
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-#LogoHeader img {
-    height: 60px;
-    width: 60px;
-    padding: 20px 30px;
-    border-radius: 100%;
-    position: absolute; 
-    @include desktop() {
-        padding-top: 30px;
-        height: 160px;
-        width: 160px;
-    }    
-}
 
-#TitleHeader {
-    font-family: $font-stack;
-    font-size: 20px;
-    font-weight: bold;
-    -webkit-text-stroke-color: #F9BC60;
-    -webkit-text-stroke-width: 0.5px;
-    color: #D7D7D7;
-    text-shadow: -4px 3px 0 #0a0e27 , -14px 7px 0 #0a0e27;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    @include desktop() {   
-        font-size: 34px;
-        padding-top: 20px;
-        padding-bottom: -10px;
-    }
-}
+    .CabeceraNavBar {
+        display: flex;
+        flex-direction: column;
 
-#PlayStart {
-    display: none;
-    @include desktop() { 
-    color:#D7D7D7;
-    font-family: $font-stack;
-    font-size: 18px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 60px;
     }
 
-}
 
-body {
-   
-    height: 100vh;
-    background-image: url('../../assets/images/fondo_home.webp');
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
-    background-size: cover;
-    font-family: $font-stack;
-    color:#004643;
-    font-weight:600;
-
-    .ContenedorFondo {
+    .header {
         width: 100%;
-        justify-content: center;
-         
-        .SecTextoComoJugar {
+        // height: 100px;
+        background-color: #004643;
+        position: fixed;
+        top: 0;
+        left:0;
+        @include desktop() {
+        margin: 0;
+        height: 200px;
+        
+        }
+
+        .LogoTitleNav {
+            display: flex;
+            justify-content: flex-start ;
+            align-items: center;
+            gap: 10px;
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+
+        #LogoHeader img {
+            height: 60px;
+            width: 60px;
+            // padding: 20px 30px;
+            border-radius: 100%;
+            // position: absolute; 
+            @include desktop() {
+                height: 160px;
+                width: 160px;
+            } 
+        }    
+
+        #TitleHeader {
             font-family: $font-stack;
-            background-color:rgb(255, 255, 255, 0.35);
-            padding: 10%;
-            margin: 2%;
-            text-align: justify;
+            font-size: 18px;
+            font-weight: bold;
+            -webkit-text-stroke-color: #F9BC60;
+            -webkit-text-stroke-width: 0.5px;
+            color: #D7D7D7;
+            width: max-content;
+            text-shadow: -4px 3px 0 #0a0e27 , -6px 6px 0 #0a0e27;
+                @include desktop() {   
+                    font-size: 34px;
+
+                }
+            }
+
+        #PlayStart {
+            color: #004643;
+            font-family: $font-stack;
+            font-size: 18px;
+            display: none;
+            @include desktop() { 
+                display: block;
+                color:#D7D7D7;
+                position: absolute;
+                top: 50%;
+                left: 80%;
+                }
             
-    
-            .TituloComoJugar {
-                font-size: 18px;
-                font-weight: bolder;
-                text-align: center;
-                @include desktop(){
-                    font-size: 30px;
-                }
             }
-    
-            .ParrTextoComoJugar {
-                font-size:15px;
-                overflow: auto;
-                
-                @include desktop(){
-                    font-size: 22px;
-                }
-            }
-            
+
         }
-
-        .SecBotonIrAlJuego {
-
-            width: 100%;
-            display:inline-flex;
-            justify-content: center;
     
-            .FunBotonIrAlJuego {
-                width:max-content;
-                align-content: center;
-                text-decoration: none;
-                
-        
-                #BotonIrAlJuego {
-                   
-                    background-color: #F6BFBF;
-                    font-family: $font-stack ;
-                    font-size: 20px;
-                    font-weight: bolder;
-                    color: #004643;
-                    border-radius: 10px;
-                    border-style: solid;
-                    border-color: #004643;
-                    border-bottom-width: medium ;
-                    padding: 15% 40%;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: #E16162;
-                        scale: 1.2;
-                    }
-                       
-                    @include desktop(){
-                        font-size: 30px;
-                }
-        
-            }
-        }
-    }
-      
-    
- }
-
-}
