@@ -1,0 +1,122 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+ $font-stack: 'Inter';
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #004643;
+    @include desktop() {
+    height: 260px;
+    } 
+}
+
+#LogoHeader img {
+    height: 60px;
+    width: 60px;
+    padding: 20px 30px;
+    border-radius: 100%;
+    position: absolute; 
+    @include desktop() {
+        padding-top: 30px;
+        height: 160px;
+        width: 160px;
+    }    
+}
+
+#TitleHeader {
+    font-family: $font-stack;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-color: #F9BC60;
+    -webkit-text-stroke-width: 0.5px;
+    color: #D7D7D7;
+    text-shadow: -4px 3px 0 #0a0e27 , -14px 7px 0 #0a0e27;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    @include desktop() {   
+        font-size: 34px;
+        padding-top: 20px;
+        padding-bottom: -10px;
+    }
+}
+
+#GameStarted {
+    color:#D7D7D7;
+    font-family: $font-stack;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+ $font-stack: 'Inter';
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #004643;
+    @include desktop() {
+    height: 260px;
+    } 
+}
+
+#LogoHeader img {
+    height: 60px;
+    width: 60px;
+    padding: 20px 30px;
+    border-radius: 100%;
+    position: absolute; 
+    @include desktop() {
+        padding-top: 30px;
+        height: 160px;
+        width: 160px;
+    }    
+}
+
+#TitleHeader {
+    font-family: $font-stack;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-color: #F9BC60;
+    -webkit-text-stroke-width: 0.5px;
+    color: #D7D7D7;
+    text-shadow: -4px 3px 0 #0a0e27 , -14px 7px 0 #0a0e27;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    @include desktop() {   
+        font-size: 34px;
+        padding-top: 20px;
+        padding-bottom: -10px;
+    }
+}
+
+#PlayStart {
+    display: none;
+    @include desktop() { 
+    color:#D7D7D7;
+    font-family: $font-stack;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+    }
+}
