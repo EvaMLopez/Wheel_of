@@ -93,11 +93,13 @@ function updatePlayerNameList(): void {
         let deleteIcon = document.createElement('img');
         deleteIcon.src = '../../assets/icons/icon _trash.png';
         deleteIcon.alt = 'Delete';
+        deleteIcon.className = ('DeleteImg');
         deleteIcon.addEventListener('click', () => deletePlayer(i));
         
         let editIcon = document.createElement('img');
         editIcon.src = '../../assets/icons/icon _edit.png';
         editIcon.alt = 'Edit';
+        editIcon.className = ('EditImg');
         editIcon.addEventListener('click', () => editPlayer(i));
 
         li.appendChild(document.createTextNode(players[i].name));

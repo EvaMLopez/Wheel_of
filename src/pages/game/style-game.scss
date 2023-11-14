@@ -65,7 +65,7 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
 $font-stack: 'Inter';
 
-//  * {border: solid 1px red}
+ // * {border: solid 1px red}
 
 @mixin desktop {
     @media screen and (min-width: 660px) {
@@ -75,6 +75,11 @@ $font-stack: 'Inter';
 
 ul {
     list-style: none;
+    padding: 1% 10% 1% 10%;
+    @include desktop() {
+        padding: 1% 30% 1% 30%;
+    }
+
 }
 
 body {
@@ -84,15 +89,24 @@ body {
 
 h2 {
     text-align: center;
+    font-size: 1.2em;
+    @include desktop() {
+        font-size: 2.2em;
+    }
 }
 
 #Play{
     border-radius: 3em;
-    padding: 0.5em 1.5em;
+    padding: 0.4em 1.2em;
     background-color: #E16162;
     font-size: 1.2em;
     font-weight: bold;
     color:#004643;
+    @include desktop() {
+        font-size: 2em;
+        border-radius: 0.6em;
+        padding: 0.2em 1.1em;
+    }
 }
 
 #imageSection {
@@ -118,49 +132,72 @@ h2 {
     position: absolute;
 }
 
-.BalloonsList .BalloonImg {
-    width: 20px;
-}
-
 .BalloonsList {
     display: grid;
-    grid-template-columns: auto repeat(6, 1fr);     
+    grid-auto-flow: column;
+    gap: 3px;
+        
+    grid-template-columns: 80% 6% 6% 6%; 
+    .BalloonImg {
+        width: 20px;
+    }
+
+    @include desktop() {
+             
+
+    }
 }
 
-.BalloonsList > *:first-child {
-    grid-column: 1 / span 1; 
+.PlayersIconsList {
+    text-align: left;
+    @include desktop() {
+   
+    }
 }
 
-.BalloonsList > *:nth-child(2) {
-    grid-column: 8 / span 1;
+.BalloonsList >.BalloonImg {    
+    width: 25px;    
+    @include desktop() {
+        width: 45px;
+    }
 }
 
-.BalloonsList > *:nth-child(3) {
-    grid-column: 9 / span 1;
-}
+.BalloonsList > .EditImg {
+    cursor: pointer;
+    @include desktop() {
+        width: 45px;
+    }
+}    
 
-.BalloonsList > *:nth-child(4) {
-    grid-column: 10 / span 1;
-}
+.BalloonsList > .DeleteImg {  
+    cursor: pointer;
+    @include desktop() {
+        width: 45px;
+    }
+} 
 
 #IconAddUser {
     margin-left: 1em;
+    @include desktop() {
+        width: 3em;
+    }
 }
 
 #PlayerInput {
     display: flex;
     align-items: center;
     justify-content: center;
+    input {
+        size: 30px;        
+
+    }
 }
 
 #playerName {
     margin-bottom: 0;
-}
+    
 
-// versión escritorio  --MODIFICAR para que se muestre --
-/* #star {
-    display: none;
-} */
+}
 
 
 .box-balloons {
