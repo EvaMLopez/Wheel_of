@@ -40,9 +40,13 @@ body {
      
     @include mobile() {
         display: none;
-
+        background-color:darkslategrey;
+        max-height: fit-content;
+        height: max-content;
+        
         &.activo{
             display: flex;
+            
         }
     }
    
