@@ -17,23 +17,23 @@
     } 
 }
 
+.Section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
 .AllRightsReserved {
     color: white;
     font-family:$font-stack;
-    font-size: 20px;
-    width: 30%;
+    font-size: 10px;
 }
 
 .SocialNetworks {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    margin-right: 10px;
-    
-   
-   
-    
-
 }
 
 .SocialFacebook {
@@ -86,4 +86,9 @@
 
 .Social {
     margin: 10%;
-}
+} 
+
+
+
+
+
