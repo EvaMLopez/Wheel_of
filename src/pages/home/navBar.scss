@@ -82,6 +82,9 @@ body {
 .nav-menu-link{
     padding: 9px 12px;
     border-radius: 3px;
+    @include mobile(){
+        padding: 6px 10px;
+    }
 
 }
 
