@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.scss">
+</head>
+
+<body>
+    <header class="header">
+
+        <img id="Logo" src="../../assets/icons/logo.webp" alt="logo">
+
+        <h1 id="Title">Feria del misterio</h1>
+
+        <p id="Paragraph">El juego ha comenzado...</p>
+
+        <button class="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+            <button>
+    </header>
+    <nav class="nav">
+        <ul class="nav-menu ">
+
+            <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link">Inicio</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link">Juego</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link">Resultados</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-menu-link nav-link nav-menu-link:active">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="ContainResult">
+        <div class="ListResult">
+            <div class="TittleListResult">
+                <h2>RESULTADO</h2>
+            </div>
+
+            <ul class="ListResultsWinners">
+                <li> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pig" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1" stroke="#ffec00" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 11v.01" />
+                        <path
+                            d="M16 3l0 3.803a6.019 6.019 0 0 1 2.658 3.197h1.341a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-1.342a6.008 6.008 0 0 1 -1.658 2.473v2.027a1.5 1.5 0 0 1 -3 0v-.583a6.04 6.04 0 0 1 -1 .083h-4a6.04 6.04 0 0 1 -1 -.083v.583a1.5 1.5 0 0 1 -3 0v-2l0 -.027a6 6 0 0 1 4 -10.473h2.5l4.5 -3z" />
+                    </svg></li>
+                <hr width="80%" size="1">
+                <li>2º</li>
+                <hr width="80%" size="1">
+                <li>3º</li>
+                <hr width="80%" size="1">
+                <li>4º</li>
+                <hr width="80%" size="1">
+                <li>5º</li>
+                <hr width="80%" size="1">
+            </ul>
+            <button id="ButtonReiniciar">REINICIAR</button>
+        </div>
+
+    </section>
+    <footer>
+        <section class="Section">
+            <div class="AllRightsReserved">
+                <p>Todos los derechos reservados.
+                    <br>
+                    &copy;2023-Feria del Misterio SA.
+                </p>
+            </div>
+            <div class="SocialNetworks">
+                <div class="SocialFacebook">
+                    <a href="https://www.facebook.com/?locale=es-ES" target="_blank"><img class="Social"
+                            src="../../assets/icons/Facebook.svg" alt="facebook"><a href=""></a>
+                </div>
+                <div class="SocialInstagram">
+                    <a href="https:/www.instagram.com" target="_blank"><img class="Social"
+                            src="../../assets/icons/Instagram.svg" alt="instagram"></a>
+                </div>
+                <div class="SocialMail">
+                    <a href="https://www.gmail.com" target="_blank"><img class="Social"
+                            src="../../assets/icons/MailOutline.svg" alt="email"></a>
+                </div>
+                <div class="SocialYoutube">
+                    <a href="https://www.youtube.com" target="_blank"><img class="Social"
+                            src="../../assets/icons/Youtube.svg" alt="youtube"></a>
+
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="./result.ts"></script>
+</body>
+
+</html>
