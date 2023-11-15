@@ -16,22 +16,18 @@ La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en l
 ## DISEÑO DE LA WEB CON FIGMA
 ### DISEÑO LAPTOP 💻
 <div style="display: flex; flex-direction: column; align-items: center;>
-
-    <img src="./src/assets/readme-img/index.PNG" >
-
     <img src="./src/assets/readme-img/game.PNG" >
-
+    <img src="./src/assets/readme-img/index.PNG" >
+    <img src="./src/assets/readme-img/game.PNG" >
     <img src="./src/assets/readme-img/result.PNG" >
 </div>
 
 ### DISEÑO MOBILE 📱
 
 <div style="display: flex; flex-direction: column; align-items: center;>
-
     <img src="./src/assets/readme-img/index.mobile.PNG" >
-
+    <img src="./src/assets/readme-img/index.mobile.PNG" >
     <img src="./src/assets/readme-img/game-mobile.PNG" >
-
     <img src="./src/assets/readme-img/result-mobile.PNG" >
 </div>
 
