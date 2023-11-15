@@ -12,7 +12,8 @@ $font-stack: 'Inter';
 
 body {
    
-    height: 100vh;
+    height: 100%;
+    margin: 0;
     background-image: url('../../assets/images/fondo_home.webp');
     background-repeat: no-repeat;
     background-position-x: center;
