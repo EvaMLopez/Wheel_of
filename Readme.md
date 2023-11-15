@@ -1,20 +1,21 @@
-# La feria del misterio  🎪🎈
+# LA FERIA DEL MISTERIO  🎪🎈
 
-## DESCRIPCIÓN DEL PROYECTO 
+## DESCRIPCIÓN DEL PROYECTO 📓
 
-<p align="center">
-  <img src="./src/assets/readme-img/oink-oink.png" title="oink" alt="oink" width="80" height="80"/>
-</p>
+
 
 ¡Bienvenido a la Feria del Misterio!
-¿Estás listo para sumergirte en la emoción de la Feria del Misterio? 
+¿Estás listo para sumergirte en la emoción de nuestro reto? 
 
-Descripción del Juego
-La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en la emocionante experiencia de una feria misteriosa donde los globos no son solo para , ¡Si ganas te llevas un cerdito! 🤩
+La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en la emocionante experiencia de una feria misteriosa donde los globos no son solo para explotarlos, ¡Si ganas te llevas un cerdito! 🤩
+
+<p align="center">
+  <img src="./src/assets/readme-img/oink-oink.png" title="oink" alt="oink" width="200" height="200"/>
+</p>
 
 
 ## DISEÑO DE LA WEB CON FIGMA
-### DISEÑO LAPTOP 💻
+### LAPTOP 💻
 <div style="display: flex; flex-direction: column; align-items: center;>
     <img src="./src/assets/readme-img/game.PNG" >
     <img src="./src/assets/readme-img/index.PNG" >
@@ -22,7 +23,7 @@ La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en l
     <img src="./src/assets/readme-img/result.PNG" >
 </div>
 
-### DISEÑO MOBILE 📱
+### MOBILE 📱
 
 <div style="display: flex; flex-direction: column; align-items: center;>
     <img src="./src/assets/readme-img/index.mobile.PNG" >
@@ -59,6 +60,8 @@ La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en l
 - [Borja Fernández](https://github.com/BarmanDev)
 - [David Colunga](https://github.com/Colunga-D)
 - [Eva López](https://github.com/EvaMLopez)
+- [Rebeca MF](https://github.com/RebecaMFep)
+  
 
 
 
