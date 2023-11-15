@@ -3,16 +3,26 @@
     <img src="">
 </div>
 
-## DESCRIPCIÓN DEL PROYECTO  :mag:
+## DESCRIPCIÓN DEL PROYECTO  🎪🎈
 
+<img src="./src/assets/readme-img/oink-oink.png" title="oink" alt="oink" width="80" height="80"/>&nbsp;
+
+¡Bienvenido a la Feria del Misterio!
+¿Estás listo para sumergirte en la emoción de la Feria del Misterio? 
+
+Descripción del Juego
+La Feria del Misterio es un juego desarrollado en TypeScript que te sumerge en la emocionante experiencia de una feria misteriosa donde los globos no son solo para , ¡Si ganas te llevas un cerdito! 🤩
 
 
 ## DISEÑO DE LA WEB CON FIGMA
+### DISEÑO LAPTOP 💻
 <div>
-    <img src="./public/img/readme/figma.PNG" >
+    <img src="./src/assets/readme-img/index.PNG" >
+    <img src="./src/assets/readme-img/game.PNG" >
+    <img src="./src/assets/readme-img/result.PNG" >
 </div>
-<br>
 
+### DISEÑO MOBILE 📱
 
 ## USER FLOW
 <div>
@@ -28,29 +38,6 @@
 
 </div>
 
-## FUNCIONALIDADES DE LA WEB
-
-### Vista principal
-1. Menú principal con la BSO de disney pudiendo mutear la canción.
-2. Navbar animado con hover.
-3. Slider animado con los productos de Disney.
-4. Sección de categorías animadas con hover.
-5. Botón de Suscríbete con correo electrónico.
-6. Footer a las redes sociales.
-
-### Vista Productos
-1. 15 Productos animados con hover.
-2. Cada producto se podrá dar click en el corazón y almacenar los productos en local storage para consultar más adelante en otra vista.
-3. BSO de Star Wars con la opción de mutear la canción.
-
-### Vista detalle del producto
-1. El producto se ve con una descripción y el botón de añadir al carrito.
-2. El producto se puede cambiar de imagen para ver diferentes posiciones del mismo.
-3. El corazón de detalle del producto también tiene la funcionalidad de almacenar en local storage.
-
-### Vista favoritos
-1. Todos los productos guardados en favoritos se pueden visualizar correctamente en el caso que se quite algún favorito este desaparecerá de la lista.
-
 
 ## HERRAMIENTAS UTILIZADAS :hammer:
 <div>
@@ -65,14 +52,13 @@
 - [Borja Fernández](https://github.com/BarmanDev)
 - [David Colunga](https://github.com/Colunga-D)
 - [Eva López](https://github.com/EvaMLopez)
-- [Verónica Sampedro](https://github.com/verosampedro)
 
 
 
 
 
 
-## INSTALACIÓN DEL PROYECTO
+## INSTALACIÓN DEL PROYECTO 
 ```
 npm install
 npm run dev
