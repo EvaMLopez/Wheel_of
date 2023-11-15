@@ -12,17 +12,20 @@ header {
     height: 100px;
     width: 100%;
     background-color: #004643;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     @include desktop() {
     height: 260px;
     } 
 }
 
-#LogoHeader img {
+#Logo {
     height: 60px;
     width: 60px;
     padding: 20px 30px;
     border-radius: 100%;
-    position: absolute; 
+    /* position: absolute;  */
     @include desktop() {
         padding-top: 30px;
         height: 160px;
@@ -30,7 +33,7 @@ header {
     }    
 }
 
-#TitleHeader {
+#Title {
     font-family: $font-stack;
     font-size: 20px;
     font-weight: bold;
@@ -42,19 +45,20 @@ header {
     justify-content: center;
     align-items: center;  
     @include desktop() {   
-        font-size: 34px;
+        font-size: 70px;
         padding-top: 20px;
         padding-bottom: -10px;
     }
 }
 
-#PlayStart p {
+#Paragraph {
     display: none;
     @include desktop() {   
     color:#D7D7D7;
     font-family: $font-stack;
-    font-size: 18px;
+    font-size: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding-right: 60px;
