@@ -1,7 +1,8 @@
-
-@import "../home/navBar.scss";
-@import "../home/header.scss";
-@import "../home/footer.scss";
+@import url(../home/header.scss);
+@import url(../home/footer.scss);
+@import url(../home/navBar.scss);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+$font-stack: 'Inter';
 
 *{
     margin: 0px;
@@ -12,21 +13,26 @@
     @media screen and (min-width: 550px) {
         @content
     }
- }
+}
 
- @mixin computer-screen {
+@mixin computer-screen {
     @media screen and (min-width: 1024px) {
         @content
     }
- }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+}
 
 .ScreenGame {
-    background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background.PNG');
-    background-size: cover;
+    background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background-mobile.PNG');
     background-repeat: no-repeat;
-  }
-  
-
+    background-size: 100% 100%;
+    height: 100vh; 
+}
 .balloons-row{
     margin-left: 1rem;
     margin-top: 3rem;
@@ -35,37 +41,31 @@
     align-items: center;
 }
 
-
 .balloons-row img{
     display: flex;
     justify-content: center;
-
 }
-
-@import url(../home/style.scss);
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
-$font-stack: 'Inter';
-
- // * {border: solid 1px red}
-
-@mixin desktop {
-    @media screen and (min-width: 660px) {
-        @content
-    }
- }
 
 ul {
     list-style: none;
-    padding: 1% 10% 1% 10%;
-    @include desktop() {
-        padding: 1% 30% 1% 30%;
-    }
+    padding: 1rem;
+    margin: 1rem;
 }
 
 body {
-    overflow: hidden;
     font-family: $font-stack;
-} 
+    @include tablet {
+        background-color: #cddddc;
+
+    }
+    @include desktop {
+        background-color: #cddddc;
+
+    }
+    @include computer-screen {
+        background-color: #cddddc;
+    }
+}
 
 h2 {
     text-align: center;
@@ -103,7 +103,21 @@ h2 {
 }
 
 #playerName {    
-    margin-bottom: 30px;
+    margin-top: 2rem;
+    margin-left: 23rem;
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+#IconAddUser {
+    margin-top: 2rem;
+    margin-right: 20rem;
+    width: 2rem;
+    cursor: pointer;
 }
 
 .Balloon {
@@ -117,14 +131,11 @@ h2 {
     grid-auto-flow: column;
     gap: 3px;
         
-    grid-template-columns: 80% 6% 6% 6%; 
+    grid-template-columns: 20% 70% 20% 0%; 
     .BalloonImg {
         width: 20px;
     }
 
-    @include desktop() {             
-
-    }
 }
 /* 
 #StartButton {
@@ -164,6 +175,11 @@ h2 {
     }
 } 
 
+#playerNameList{
+    padding-left: 5rem;
+    padding-right: 4rem;
+}
+
 #IconAddUser {
     margin-left: 1em;
     @include desktop() {
@@ -184,19 +200,28 @@ input {
     font-size: 1em;
 }
 
-#playerName {
-    margin-bottom: 0;    
-
-}
-
-
 .box-balloons {
-    border: 12px solid chocolate ;
-    height: 400px;
+    padding: 4rem;
+    height: 700px;
     overflow: hidden; 
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+}
+
+.box-results{
+    background-position: center center;
+    margin-top: 1.5rem;
+    overflow: hidden; 
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.box-controls{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-balloons img{
@@ -213,23 +238,78 @@ input {
 
 @include tablet(){
 
+    .BalloonsList {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3px;     
+        grid-template-columns: 10% 70% 10% 0%; 
+
+    }
+
+    .box-balloons{
+        padding: 5rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .ScreenGame {
+        background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background.PNG');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100vh; 
+    }
+
+
     .box-balloons img{
         margin-left: 1.5rem;
-        width: 5.5rem;
+        width: 5rem;
+    } 
+
+    #playerNameList{
+        padding-left: 6rem;
+        padding-right: 4rem;
     }
-    
+
+    .BalloonsList img{
+        padding: 0.3rem;
+    }
 
 }
 
 @include computer-screen() { 
 
-.box-balloons{
-    width: 48%;
-}
+    .BalloonsList {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3px;
+            
+        grid-template-columns: 10% 60% 10% 0%; 
+        .BalloonImg {
+            width:60%;
+        }
+    
+    }
 
-.box-balloons img{
-    width: 5.8rem;
-}
+    .box-balloons{
+        padding-left: 8rem;
+    }
+
+    .BalloonsList img{
+        margin-left: 1rem;
+
+    }
+
+    .box-balloons img{
+        width: 8.8rem;
+    }
+
+    #playerNameList{
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+
+ 
+
 }
 
 #BtnContainer {
