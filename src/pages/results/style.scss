@@ -1,123 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-$font-stack: 'inter';
+@import "../home/header.scss";
+@import "../home/footer.scss";
+@import "../home/navBar.scss";
 
-@mixin desktop {
-    @media screen and (min-width: 660px) {
-        @content
-    }
-}
+//  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+// $font-stack: 'inter';
 
-body {
-    background-image: url(../../assets/images/Sin\ título.png);
-    background-repeat: no-repeat;
-    background-size: 100% 85%;
-    max-width: 100%;
-    max-height: 100%;
-    height: 55rem;
-    margin: 0;
-    /* Elimina los márgenes por defecto */
-    padding: 0;
-    /* Elimina los rellenos por defecto */
-    overflow: hidden;
+// @mixin desktop {
+//     @media screen and (min-width: 660px) {
+//         @content
+//     }
+// }
 
-    /* Evita el desbordamiento de la sección en la imagen de fondo */
-    @include desktop() {
-        background-image: url(../../assets/images/S1e9_win_a_pig.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 93%;
-        max-width: 100%;
-        max-height: 100%;
-        height: 60rem;
-    }
+// body {
+//     background-image: url(../../assets/images/Sin\ título.png);
+//     background-repeat: no-repeat;
+//     background-size: 100% 85%;
+//     max-width: 100%;
+//     max-height: 100%;
+//     height: 55rem;
+//     margin: 0;
+//     /* Elimina los márgenes por defecto */
+//     padding: 0;
+//     /* Elimina los rellenos por defecto */
+//     overflow: hidden;
 
-
-    .ContainResult {
-        padding-top: 53.7vh;
-        height: 40vh;
-
-        @include desktop() {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            padding: 0;
-            height: 200%;
+//     /* Evita el desbordamiento de la sección en la imagen de fondo */
+//     @include desktop() {
+//         background-image: url(../../assets/images/S1e9_win_a_pig.jpg);
+//         background-repeat: no-repeat;
+//         background-size: 100% 93%;
+//         max-width: 100%;
+//         max-height: 100%;
+//         height: 60rem;
+//     }
 
 
+//     .ContainResult {
+//         padding-top: 53.7vh;
+//         height: 40vh;
 
-
-
-
-        }
-
-
-
-        .ListResult {
-
-            height: 45vh;
-            background-color: #004643;
-            opacity: 0.48;
-
-            @include desktop() {
-                display: flex;
-                flex-direction: column;
-                width: 22.7%;
-                opacity: 0.70;
-                height: 55rem;
-                -webkit-text-stroke: 0.1px #f7eec0;
-
-
-            }
-
-
-            .TittleListResult {
-                font-family: $font-stack;
-                color: aliceblue;
-                -webkit-text-stroke: 0.5px #ffea72;
-                font-size: 2.4vh;
-                text-align: center;
-
-                @include desktop() {
-
-                    -webkit-text-stroke: 0.1px #f7eec0;
-
-
-                }
-
-            }
-
-            .ListResultsWinners {
-                color: aliceblue;
-                -webkit-text-stroke: 0.5px #ffea72;
-                font-size: 2.5vh;
-                list-style-type: none;
-                width: 100%;
+//         @include desktop() {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: flex-end;
+//             padding: 0;
+//             height: 200%;
 
 
 
 
 
-            }
 
-            .ListResults hr {
-                margin-top: 1px;
-                /* Ajusta la cantidad de margen a tu preferencia */
-            }
-
-            #ButtonReiniciar {
-                display: block;
-                margin: 0 auto;
-                /* Esto centrará el botón horizontalmente */
-                /* Agrega cualquier estilo necesario para #ButtonResult aquí */
-                border-radius: 20px;
-                height: 3vh;
-
-                @include desktop() {}
-            }
-
-        }
+//         }
 
 
 
-    }
+//         .ListResult {
 
-}
+//             height: 45vh;
+//             background-color: #004643;
+//             opacity: 0.48;
+
+//             @include desktop() {
+//                 display: flex;
+//                 flex-direction: column;
+//                 width: 22.7%;
+//                 opacity: 0.70;
+//                 height: 55rem;
+//                 -webkit-text-stroke: 0.1px #f7eec0;
+
+
+//             }
+
+
+//             .TittleListResult {
+//                 font-family: $font-stack;
+//                 color: aliceblue;
+//                 -webkit-text-stroke: 0.5px #ffea72;
+//                 font-size: 2.4vh;
+//                 text-align: center;
+
+//                 @include desktop() {
+
+//                     -webkit-text-stroke: 0.1px #f7eec0;
+
+
+//                 }
+
+//             }
+
+//             .ListResultsWinners {
+//                 color: aliceblue;
+//                 -webkit-text-stroke: 0.5px #ffea72;
+//                 font-size: 2.5vh;
+//                 list-style-type: none;
+//                 width: 100%;
+
+
+
+
+
+//             }
+
+//             .ListResults hr {
+//                 margin-top: 1px;
+//                 /* Ajusta la cantidad de margen a tu preferencia */
+//             }
+
+//             #ButtonReiniciar {
+//                 display: block;
+//                 margin: 0 auto;
+//                 /* Esto centrará el botón horizontalmente */
+//                 /* Agrega cualquier estilo necesario para #ButtonResult aquí */
+//                 border-radius: 20px;
+//                 height: 3vh;
+
+//                 @include desktop() {}
+//             }
+
+//         }
+
+
+
+//     } */
+ 
