@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins&family=Yellowtail&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+ $font-stack: 'Inter';
+
+
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #004643;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    button {
+        height: 0;
+       width: 0;
+       border: 0;
+        margin: 0;
+        padding: 0;
+    }
+    @include desktop() {
+    height: 260px;
+    align-items: normal;
+    } 
+
+}
+
+#Logo {
+    height: 60px;
+    width: 60px;
+    padding: 20px 30px;
+    border-radius: 100%;
+    /* position: absolute;  */
+    @include desktop() {
+        padding-top: 30px;
+        height: 160px;
+        width: 160px;
+    }    
+}
+
+#Title {
+    font-family: $font-stack;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-color: #F9BC60;
+    -webkit-text-stroke-width: 0.5px;
+    color: #D7D7D7;
+    text-shadow: -4px 3px 0 #0a0e27 , -14px 7px 0 #0a0e27;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    @include desktop() {   
+        font-size: 70px;
+        padding-top: 20px;
+        padding-bottom: -10px;
+    }
+}
+
+#Paragraph {
+    display: none;
+    @include desktop() {   
+    color:#D7D7D7;
+    font-family: $font-stack;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+    }
+}
+
