@@ -13,22 +13,11 @@
  $font-stack: 'Inter';
  $heightNBmob: calc(100% - 60px);
 
-/* * {
-    margin: 0;
-    box-sizing: border-box; */
-/* } */
-
 body {
     font-family: $font-stack;
 
 }
 
-
-/* .ButtonNav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-} */
 .nav {
     
     display: flex;

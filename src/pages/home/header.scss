@@ -38,7 +38,6 @@ header {
     width: 60px;
     padding: 20px 30px;
     border-radius: 100%;
-    /* position: absolute;  */
     @include desktop() {
         padding-top: 30px;
         height: 160px;

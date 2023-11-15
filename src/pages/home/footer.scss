@@ -17,13 +17,6 @@
     } 
 }
 
-/* .Section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-} */
-
 .Section {
     display: flex;
     flex-direction: row;  
@@ -54,8 +47,6 @@
         font-size: 30px;
         color: white;
         font-family:$font-stack;
-       /*  display: flex;
-        align-items: center; */
         }  
 }
 
