@@ -2,40 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-<<<<<<< HEAD
-@mixin desktop {
-    @media screen and (min-width: 660px) {
-=======
 
 @mixin mobile {
     @media screen and (max-width: 660px) {
->>>>>>> dev
         @content
     }
  }
 
 
  $font-stack: 'Inter';
-<<<<<<< HEAD
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-size: $font-stack;
-
-}
-
-.header {
-    background-color: #004643;
-    width: 100%;
-}
-
-.nav {
-    
-}
-=======
  $heightNBmob: calc(100% - 60px);
 
 /* * {
@@ -152,4 +127,3 @@ body {
 
 
 
->>>>>>> dev
