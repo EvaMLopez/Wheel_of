@@ -82,34 +82,38 @@ function updatePlayerNameList(): void {
 
     for (let i = 0; i < players.length; i++) {
         let li = document.createElement('li');
-        li.textContent = players[i].name;
-        li.className = 'BalloonsList'
+        li.className = 'BalloonsList';
+
         let img = document.createElement('img');
-        img.src = players[i].balloon; 
+        img.src = players[i].balloon;
         img.alt = players[i].name;
         img.classList.add('BalloonImg');
-        li.appendChild(img);       
+
+        let playerName = document.createElement('span');
+        playerName.textContent = players[i].name;
+
+        li.appendChild(img);
+        li.appendChild(playerName);
 
         let deleteIcon = document.createElement('img');
         deleteIcon.src = '../../assets/icons/icon _trash.png';
         deleteIcon.alt = 'Delete';
-        deleteIcon.className = ('DeleteImg');
+        deleteIcon.className = 'DeleteImg';
         deleteIcon.addEventListener('click', () => deletePlayer(i));
-        
+
         let editIcon = document.createElement('img');
         editIcon.src = '../../assets/icons/icon _edit.png';
         editIcon.alt = 'Edit';
-        editIcon.className = ('EditImg');
+        editIcon.className = 'EditImg';
         editIcon.addEventListener('click', () => editPlayer(i));
 
-        li.appendChild(document.createTextNode(players[i].name));
-        li.appendChild(img);
-        li.appendChild(editIcon);
         li.appendChild(deleteIcon);
+        li.appendChild(editIcon);
 
         if (playerNameList) playerNameList.appendChild(li);
     }
 }
+
 
 function updateEliminatedNameList(): void {
     let eliminatedNameList = document.getElementById('eliminatedNameList');

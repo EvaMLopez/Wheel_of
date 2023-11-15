@@ -18,32 +18,31 @@
             <p>El juego ha comenzado...</p>
         </div>
     </header>  
-
+    <!-- end navabar -->
     <div class="ScreenGame">
-            <div class="box-balloons" id="balloonsContainer"></div>
-            <div class= "PlayersIconsList">
-                <div id="BtnContainer" >
-                    <button onclick="play()" id="Play">PLAY</button>
-                </div>
-                <br>
-                
-                <div id="PlayerInput">
-                    <input type="text" id="playerName" placeholder="Nombre del jugador">    
-                    <img src="../../assets/icons/icon _user_add.png" id="IconAddUser" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
-                </div>
-                
-                <button onclick="resetGame()">Reiniciar</button>
-                <!-- <h2>Participantes:</h2>
-                    <ul id="playerList"></ul> -->
-                    <h2>Nombres de los Participantes:</h2>
-                    <ul id="playerNameList"></ul>
-                </div>
-                    <!-- <h2>Nombres de los Eliminados</h2>
-                    <ul id="eliminatedNameList"></ul> -->
+         <div class="box-balloons" id="balloonsContainer"></div>
     </div>
     
-   
+    <div class="box-results">
+        <h2>AÑADIR JUGADORES</h2>
+        <div id="PlayerInput">
+
+            <input type="text" id="playerName" placeholder="Nombre del jugador">    
+            <img src="../../assets/icons/icon _user_add.png" id="IconAddUser" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
+        </div>
+        <div class="box-controls">
+            <button onclick="play()">Play</button>
+            <button onclick="resetGame()">Reiniciar</button>
+        </div>
+                <ul id="playerList"></ul>
+            <h2>Nombres de los Participantes:</h2>
+            <ul id="playerNameList"></ul>
+            <h2>Nombres de los Eliminados</h2>
+            <ul id="eliminatedNameList"></ul>
+        </div>
+     </div>
     <script src="./home.ts"></script>
     <script src="game.ts"></script>
 </body>
 </html>
+
