@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin desktop {
+    @media screen and (min-width: 660px) {
+        @content
+    }
+ }
+
+
+$font-stack: 'Inter';
+
+body {
+   
+    height: 100vh;
+    background-image: url('../../assets/images/fondo_home.webp');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    font-family: $font-stack;
+    color:#004643;
+    font-weight:600;
+
+    .ContenedorFondo {
+        width: 100%;
+        justify-content: center;
+         
+        .SecTextoComoJugar {
+            font-family: $font-stack;
+            background-color:rgb(255, 255, 255, 0.35);
+            padding: 10%;
+            margin: 2%;
+            text-align: justify;
+            
+    
+            .TituloComoJugar {
+                font-size: 18px;
+                font-weight: bolder;
+                text-align: center;
+                @include desktop(){
+                    font-size: 30px;
+                }
+            }
+    
+            .ParrTextoComoJugar {
+                font-size:15px;
+                overflow: auto;
+                
+                @include desktop(){
+                    font-size: 22px;
+                }
+            }
+            
+        }
+
+        .SecBotonIrAlJuego {
+
+            width: 100%;
+            display:inline-flex;
+            justify-content: center;
+    
+            .FunBotonIrAlJuego {
+                width:max-content;
+                align-content: center;
+                text-decoration: none;
+                
+        
+                #BotonIrAlJuego {
+                   
+                    background-color: #F6BFBF;
+                    font-family: $font-stack ;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    color: #004643;
+                    border-radius: 10px;
+                    border-style: solid;
+                    border-color: #004643;
+                    border-bottom-width: medium ;
+                    padding: 15% 40%;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #E16162;
+                        scale: 1.2;
+                    }
+                       
+                    @include desktop(){
+                        font-size: 30px;
+                }
+        
+            }
+        }
+    }
+      
+    
+ }
+
+}
