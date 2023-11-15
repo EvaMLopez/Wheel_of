@@ -1,15 +1,15 @@
-const ButtonReiniciar = document.getElementById('ButtonReiniciar');
+// const ButtonReiniciar = document.getElementById('ButtonReiniciar');
 
-ButtonReiniciar.addEventListener('click', () => {
+// ButtonReiniciar.addEventListener('click', () => {
     
-    reiniciarTodosLosDatosDeJugadores();
+//     reiniciarTodosLosDatosDeJugadores();
 
     
-    actualizarInterfazDeUsuario();
-});
+//     actualizarInterfazDeUsuario();
+// });
 
-function reiniciarTodosLosDatosDeJugadores() {
+// function reiniciarTodosLosDatosDeJugadores() {
     
-    for (const jugador of playerNameList) {
-        reiniciarDatosDelJugador(jugador);
-    }
+//     for (const jugador of playerNameList) {
+//         reiniciarDatosDelJugador(jugador);
+//     }
