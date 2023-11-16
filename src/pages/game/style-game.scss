@@ -28,11 +28,14 @@ $font-stack: 'Inter';
 }
 
 .ScreenGame {
-    background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background-mobile.PNG');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh; 
+    @include computer-screen {
+        background-image: url('../../assets/images/background.png');        
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;         
+    }
 }
+
 .balloons-row{
     margin-left: 1rem;
     margin-top: 3rem;
@@ -131,45 +134,83 @@ h2 {
     grid-auto-flow: column;
     gap: 3px;
         
-    grid-template-columns: 20% 70% 20% 0%; 
+    grid-template-columns: 20% 60% 20% 0%; 
     .BalloonImg {
         width: 20px;
     }
 
 }
-
-.PlayersIconsList {
-    text-align: left;
+/* 
+#StartButton {
+    display: block;    
     @include desktop() {
-   
+        
+
     }
-}
+} */
+
 
 .BalloonsList >.BalloonImg {    
     width: 25px;    
     @include desktop() {
-        width: 45px;
+        width: 40px;
+    }
+    @include computer-screen {
+        width: 32px;
     }
 }
 
 .BalloonsList > .EditImg {
     cursor: pointer;
     @include desktop() {
-        width: 45px;
+        width: 40px;
+    }
+    @include computer-screen {
+        width: 32px;
     }
 }    
 
 .BalloonsList > .DeleteImg {  
     cursor: pointer;
     @include desktop() {
-        width: 45px;
+        width: 40px;
     }
-} 
+    @include computer-screen {
+        width: 32px;
+    }
+}
+
+
 
 #playerNameList{
     padding-left: 5rem;
     padding-right: 4rem;
+    
+    
+    @include tablet {        
+
+    }
+    @include desktop {       
+
+    }
+    @include computer-screen {
+        background: linear-gradient(rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5));
+        padding-left: 0.5rem;
+        padding-right: 0;
+        right:0 ;
+    }
 }
+
+.PlayersIconsList {
+    text-align: left;
+    display: block;
+    @include computer-screen() {
+        position: absolute;   
+        right: 0;
+        margin-right: 5rem;
+    }
+}
+
 
 #IconAddUser {
     margin-left: 1em;
@@ -181,14 +222,106 @@ h2 {
 #PlayerInput {
     display: flex;
     align-items: center;
-    justify-content: center;
-    input {
-        size: 30px;        
+    justify-content: center;     
+}
 
+input {    
+    background-color: #f1d4a9;    
+    border: black 1px solid;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.ContainerBallonsImg {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+.ContainerBallonsImg img {
+    width: 100%;
+    height: auto;
+}
+.ImgBackground {
+    position: relative;    
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%), url('../../assets/images/background.PNG');
+    @include computer-screen{
+        display: none;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%), url('../../assets/images/background.PNG');
+    }
+}
+#ContainerButtonReset {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#ButtonReset {
+    border-radius: 2em;
+    padding: 0.2em 0.5em;
+    margin: 1em;
+    @include computer-screen {
+        font-size: 1.2em;        
+    }
+
+    
+
+}
+.box-balloons {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    height: 196px;
+    width: 328px;
+    overflow: hidden; 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    @include tablet {
+        height: 204px;
+        width: 398px; 
+    }
+    @include desktop {      
+        height: 303px;
+        width: 523px;
+        top: 245px;
+    }
+    @include computer-screen {
+        
+        bottom: 0;  
+        height: 336px;
+        width: 564px;
+        left: 0;
+        top: 700px;
+        right: 800px;
+        bottom: 0;     
+    }    
+}
+
+@include computer-screen{
+    #eliminatedNameList li{
+        font-size: 30px;
+        color:rgb(250, 247, 247);
+        font-weight: 900;
     }
 }
 
-.box-balloons {
+.box-balloons img{
+    width: 2.5rem;
+    @include tablet {
+        width: 3.1rem;            
+    }
+    @include desktop {
+        width: 3.8rem;        
+    }
+    @include computer-screen {
+        width: 5rem;
+    }
+}
+
+
+/* .box-balloons {
     padding: 4rem;
     height: 700px;
     overflow: hidden; 
@@ -196,6 +329,7 @@ h2 {
     flex-wrap: wrap;
     align-content: flex-start;
 }
+ */
 
 .box-results{
     background-position: center center;
@@ -212,9 +346,6 @@ h2 {
     align-items: center;
 }
 
-.box-balloons img{
-    width: 3.7rem;
-}
 
 .balloons-list {
     list-style: none;
@@ -223,7 +354,6 @@ h2 {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 @include tablet(){
 
@@ -235,29 +365,36 @@ h2 {
 
     }
 
-    .box-balloons{
+/*     .box-balloons{
         padding: 5rem;
         margin-bottom: 2rem;
-    }
+    } */
 
 
-    .ScreenGame {
+/*     .ScreenGame {
         background-image: linear-gradient(rgba(19, 10, 10, 0.5), rgba(51, 34, 34, 0.5)), url('../../assets/images/background.PNG');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         height: 100vh; 
+
+            height: 100%;
+    margin: 0;
+    background-image: url('../../assets/images/fondo_home.webp');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    font-family: $font-stack;
+    color:#004643;
+    font-weight:600;
     }
+ */
 
-
-    .box-balloons img{
+  /*   .box-balloons img{
         margin-left: 1.5rem;
         width: 5rem;
     } 
-
-    #playerNameList{
-        padding-left: 6rem;
-        padding-right: 4rem;
-    }
+ */
 
     .BalloonsList img{
         padding: 0.3rem;
@@ -270,35 +407,36 @@ h2 {
     .BalloonsList {
         display: grid;
         grid-auto-flow: column;
-        gap: 3px;
+        gap: 1px;
             
-        grid-template-columns: 10% 60% 10% 0%; 
+        
+        grid-row-gap:2px;
         .BalloonImg {
-            width:60%;
+            width:30%;
         }
     
     }
 
-    .box-balloons{
+/*     .box-balloons{
         padding-left: 8rem;
-    }
+    } */
 
     .BalloonsList img{
         margin-left: 1rem;
 
     }
 
-    .box-balloons img{
+/*     .box-balloons img{
         width: 8.8rem;
+    } */
+
+
+}
+
+.BalloonsList img {
+    @include computer-screen {
+        width: 2px;
     }
-
-    #playerNameList{
-        padding-left: 12rem;
-        padding-right: 12rem;
-    }
-
- 
-
 }
 
 #BtnContainer {
@@ -306,4 +444,12 @@ h2 {
     align-items: center;
     justify-content: center;
     padding-top: 1em;
+}
+
+#eContainerEliminatedNameList {
+    display: block;
+    @include computer-screen() {
+        position: fixed;
+        bottom: 0;
+    }
 }

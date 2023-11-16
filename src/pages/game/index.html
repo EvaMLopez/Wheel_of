@@ -19,8 +19,9 @@
                 
         <button class="nav-toggle">
             <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>    
+        <button>
+    </header>   
+
     <nav class="nav">
         <ul class="nav-menu ">
                         
@@ -38,56 +39,61 @@
             </li>
         </ul>
     </nav>
-    <!-- end navabar -->
-    <div class="ScreenGame">
-         <div class="box-balloons" id="balloonsContainer"></div>
-    </div>
-    
-    <div class="box-results">
-        <h2>AÑADIR JUGADORES</h2>
-        <div id="PlayerInput">
 
-            <input type="text" id="playerName" placeholder="Nombre del jugador">    
-            <img src="../../assets/icons/icon _user_add.png" id="IconAddUser" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
+    <div class="ScreenGame">
+        <div class="ContainerBallonsImg">
+            <div>
+                <img class="ImgBackground" src="../../assets/images/background_mobile.png" alt="">                
+                <div class="box-balloons" id="balloonsContainer"></div>
+            </div>
         </div>
-        <div class="box-controls">
-            <button onclick="play()">Play</button>
-            <button onclick="resetGame()">Reiniciar</button>
-        </div>
-                <ul id="playerList"></ul>
+        <div id="BtnContainer" >
+            <button onclick="play()" id="Play">PLAY</button>
+        </div>         
+        <div class= "PlayersIconsList">
+            <div id="PlayerInput">
+                <input type="text" id="playerName" placeholder="Nombre del jugador">    
+                <img src="../../assets/icons/icon _user_add.png" id="IconAddUser" onclick="addPlayer(document.getElementById('playerName').value)" alt="">
+            </div>
+            <div id="ContainerButtonReset">
+                <button id="ButtonReset" onclick="resetGame()">Reiniciar</button>
+            </div>
+        <!-- <h2>Participantes:</h2>
+            <ul id="playerList"></ul> -->
             <h2>Nombres de los Participantes:</h2>
             <ul id="playerNameList"></ul>
+        </div>
+        <div id="ContainerEliminatedNameList">            
             <h2>Nombres de los Eliminados</h2>
             <ul id="eliminatedNameList"></ul>
         </div>
-     </div>
-     
-     <footer>
+    </div>
+
+    <footer>
         <section class="Section">
             <div class="AllRightsReserved">
                 <p>Todos los derechos reservados.
-                <br>
-                &copy;2023-Feria del Misterio SA.</p>
+                    <br>
+                    &copy;2023-Feria del Misterio SA.</p>
             </div>
-        <div class="SocialNetworks">
-            <div class="SocialFacebook">
-                <a href="https://www.facebook.com/?locale=es-ES" target="_blank"><img class="Social"  src="../../assets/icons/Facebook.svg" alt="facebook"><a href=""></a>
+            <div class="SocialNetworks">
+                <div class="SocialFacebook">
+                    <img class="Social"  src="../../assets/icons/Facebook.svg" alt="facebook">
+                </div>
+                <div class="SocialInstagram">
+                    <img class="Social" src="../../assets/icons/Instagram.svg" alt="instagram">
+                </div>
+                <div class="SocialMail">
+                    <img class="Social" src= "../../assets/icons/MailOutline.svg" alt="email">
+                </div>
+                <div class="SocialYoutube">
+                    <img  class="Social" src="../../assets/icons/Youtube.svg" alt="youtube">
+                </div>
             </div>
-            <div class="SocialInstagram">
-                <a href="https:/www.instagram.com" target="_blank"><img class="Social" src="../../assets/icons/Instagram.svg" alt="instagram"></a>  
-            </div>
-            <div class="SocialMail">
-                <a href="https://www.gmail.com" target="_blank"><img class="Social" src= "../../assets/icons/MailOutline.svg" alt="email"></a>   
-            </div>
-            <div class="SocialYoutube">
-                <a href="https://www.youtube.com" target="_blank"><img  class="Social" src="../../assets/icons/Youtube.svg" alt="youtube"></a>
-                
-            </div>
-        </div>
-    </section>
-</footer>
-    <script src="../home/home.ts"></script>
+        </section>
+    </footer> 
+   
+    <script src="./home.ts"></script>
     <script src="game.ts"></script>
 </body>
 </html>
-

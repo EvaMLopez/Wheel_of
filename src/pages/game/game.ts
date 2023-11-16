@@ -17,6 +17,7 @@ function resetGame(): void {
     eliminated = [];
     updatePlayerList();
     updatePlayerNameList();
+    updateEliminatedNameList();
 }
 
 function play(): void {
@@ -75,7 +76,7 @@ function updatePlayerList(): void {
     }
 }
 
-function updatePlayerNameList(): void {
+/* function updatePlayerNameList(): void {
     let playerNameList = document.getElementById('playerNameList');
 
     if (playerNameList) playerNameList.innerHTML = '';
@@ -113,6 +114,42 @@ function updatePlayerNameList(): void {
         if (playerNameList) playerNameList.appendChild(li);
     }
 }
+ */
+
+function updatePlayerNameList(): void {
+    let playerNameList = document.getElementById('playerNameList');
+
+    if (playerNameList) playerNameList.innerHTML = '';
+
+    for (let i = 0; i < players.length; i++) {
+        let li = document.createElement('li');
+        li.className = 'BalloonsList';
+
+        let img = document.createElement('img');
+        img.src = players[i].balloon;
+        img.alt = players[i].name;
+        img.classList.add('BalloonImg');
+
+        let deleteIcon = document.createElement('img');
+        deleteIcon.src = '../../assets/icons/icon _trash.png';
+        deleteIcon.alt = 'Delete';
+        deleteIcon.className = 'DeleteImg';
+        deleteIcon.addEventListener('click', () => deletePlayer(i));
+
+        let editIcon = document.createElement('img');
+        editIcon.src = '../../assets/icons/icon _edit.png';
+        editIcon.alt = 'Edit';
+        editIcon.className = 'EditImg';
+        editIcon.addEventListener('click', () => editPlayer(i));
+
+        li.appendChild(img);
+        li.appendChild(document.createTextNode(players[i].name));
+        li.appendChild(editIcon);
+        li.appendChild(deleteIcon);
+
+        if (playerNameList) playerNameList.appendChild(li);
+    }
+}
 
 
 function updateEliminatedNameList(): void {
@@ -129,25 +166,33 @@ function updateEliminatedNameList(): void {
 
 function editPlayer(index: number): void {
     const newName = prompt("Ingresar nuevo participante:");
-    if (newName !== null) {
-    // actualizar nombre editado
+    if (newName !== null) {    
     players[index].name = newName;
     
-    // actualizar listas
     updatePlayerList();
     updatePlayerNameList();
      }
     }
     
     function deletePlayer(index: number): void {
-     // eliminar 
-    players.splice(index, 1)
+        players.splice(index, 1)
     
-     // actualizar listas
-    updatePlayerList();
+        updatePlayerList();
     updatePlayerNameList();
     updateEliminatedNameList();
     }
+
+/*     let PlayersListVisible = false;
+    
+    function ShowListPlayer(): void {
+        PlayersListVisible = !PlayersListVisible;
+        const playerList = document.getElementById('PlayersIconsList');
+        if (playerList) {
+            playerList.style.display = PlayersListVisible ? 'block' : 'none';            
+        }        
+    }
+     */
+
 
 
 
