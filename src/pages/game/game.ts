@@ -17,6 +17,7 @@ function resetGame(): void {
     eliminated = [];
     updatePlayerList();
     updatePlayerNameList();
+    updateEliminatedNameList();
 }
 
 function play(): void {

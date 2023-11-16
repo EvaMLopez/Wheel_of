@@ -198,8 +198,6 @@ h2 {
         padding-left: 0.5rem;
         padding-right: 0;
         right:0 ;
-        
-        
     }
 }
 
@@ -299,6 +297,14 @@ align-items: center;
         right: 800px;
         bottom: 0;     
     }    
+}
+
+@include computer-screen{
+    #eliminatedNameList li{
+        font-size: 30px;
+        color:rgb(250, 247, 247);
+        font-weight: 900;
+    }
 }
 
 .box-balloons img{
